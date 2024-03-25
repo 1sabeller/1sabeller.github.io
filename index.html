@@ -4,16 +4,45 @@
     <!-- fonts -->
 
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Team Trojan </title>
-    <style media="screen">
+  <style >
     @font-face{
-        font-family:"rubik";
-        src:url("/font/rubik.ttf")format("truetype");
+      font-family:"rubik";
+      src:url("font/rubik.ttf")format("truetype");
+    }
+    @font-face{
+        font-family:"norm";
+        src:url("font/norm1.ttf")format("truetype");
       }
-      @font-face{
-          font-family:"norm";
-          src:url("/font/norm1.ttf")format("truetype");
-        }
+      /* link style all the same  */
+    a{
+      font-family: "norm";
+      color:#1E1D41;
+      text-decoration: none;
+    }
+    a:hover{
+      text-decoration: line-through;
+      color: #133C79;
+      font-weight: bold;
+    }
+    a:visited{
+      color: #278CC0;
+      text-decoration: line-through;
+      font-weight: bold;
+
+    }
+
+    h1{
+      font-family: "rubik";
+      color: #133C79;
+    }
+    #name{
+      color:#1E1D41;
+      text-align: center;
+    }
+
+    @media (min-width:600px){
       #nav {
         margin: 0;
         padding: 0;
@@ -27,32 +56,8 @@
         margin-right: 20px; /* Space between the list items */
         /* font-family: Arial, Helvetica, sans-serif; */
       }
-      a{
-        font-family: "norm";
-        color:#1E1D41;
-        text-decoration: none;
-      }
-      a:hover{
-        text-decoration: line-through;
-        color: #133C79;
-        font-weight: bold;
-      }
-      a:visited{
-        color: #278CC0;
-        text-decoration: line-through;
-        font-weight: bold;
-
-      }
-
-      h1{
-        font-family: "rubik";
-        color: #133C79;
-      }
-      #name{
-          color:#1E1D41;
-        text-align: center;
-      }
       .slogan{
+
         color:#1E1D41;
         text-align: left;
         margin-left: 15%;
@@ -65,20 +70,23 @@
       }
       .slogan h3{
         /* font-family: Arial, Helvetica, sans-serif; */
-      }
-      .slogan p {
-        /* font-family:Arial, Helvetica, sans-serif; */
+        font-family: 'norm';
         line-height: 120%;
       }
-
       .playstation{
-          color:#1E1D41;
+        color:#1E1D41;
         font-family:"norm";
         text-align: center;
         margin-left: 15%;
         margin-top: 10%;
         margin-right:15%;
+
       }
+      .playstation video{
+        width:568px;
+        height:432px;
+      }
+
       #about{
           color:#1E1D41;
 
@@ -92,7 +100,6 @@
 
 
       }
-
       #about ul{
         margin: 0;
         padding: 0;
@@ -101,45 +108,152 @@
       #about h2{
         text-align: center;
       }
-
       .table{
         display: flex;
         justify-content: space-between;
       }
-
       html {
-  scroll-behavior: smooth;
-}
-#contact{
+      scroll-behavior: smooth;
+      }
+      #contact{
 
-  color:#1E1D41;
-  margin-left: 15%;
-  margin-top: 10%;
-  margin-right:15%;
-  margin-bottom: 10%;
-}
-#contact h3{
-  font-family: "norm";
-}
+      color:#1E1D41;
+      margin-left: 15%;
+      margin-top: 10%;
+      margin-right:15%;
+      margin-bottom: 10%;
+      }
+      #contact h3{
+      font-family: "norm";
+      }
 
-.container {
+      .container {
         display: flex;
         justify-content: space-between;
         /* padding: 20px; */
-    }
-    .contact-form {
+      }
+      .contact-form {
         flex: 1;
         margin-right: 20px;
-    }
-    .contact-info {
+      }
+      .contact-info {
         flex: 1;
         text-align: right;
+      }
+
+
     }
+    @media (max-width:480px){
+      #nav {
+        margin: 0;
+        padding: 0;
+        list-style-type: none; /* Remove default list bullets */
 
-      
+        text-align: center; /* Center the navigation */
+      }
+      /* Style each list item */
+      #nav li {
+        display: inline; /* Display list items in a line */
+        margin-right: 20px; /* Space between the list items */
+        /* font-family: Arial, Helvetica, sans-serif; */
+      }
+      .slogan{
 
+        color:#1E1D41;
+        text-align: left;
+        margin-left: 10%;
+        margin-top: 10%;
+        margin-right:10%;
 
-    </style>
+      }
+      .slogan h1{
+        font-size: 50px;
+      }
+      .slogan h3{
+        /* font-family: Arial, Helvetica, sans-serif; */
+        font-family: 'norm';
+        font-size: 12px;
+      }
+      .slogan p{
+        font-family: 'norm';
+        font-size: 12px;
+        line-height: 120%;
+      }
+      .playstation{
+        color:#1E1D41;
+        font-family:"norm";
+        text-align: center;
+        margin-left: 10%;
+        margin-top: 10%;
+        margin-right:10%;
+
+      }
+      .playstation video{
+        width:284px;
+        height:216px;
+      }
+      #about{
+        color:#1E1D41;
+
+        font-family:"norm";
+        text-align: justify;
+        margin-left: 10%;
+        margin-top: 10%;
+        margin-right:10%;
+        line-height: 120%;
+        font-size: 12px;
+
+      }
+      #about ul{
+        margin: 0;
+        padding: 0;
+        list-style-type: none; /* Remove default list bullets */
+      }
+      #about h2{
+        text-align: center;
+      }
+      .table{
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+
+        justify-content: space-between;
+      }
+      html {
+      scroll-behavior: smooth;
+      }
+      #contact{
+
+      color:#1E1D41;
+      margin-left: 10%;
+      margin-top: 10%;
+      margin-right:10%;
+      margin-bottom: 10%;
+      text-align: center;
+      }
+      #contact h3{
+      font-family: "norm";
+
+      }
+
+      .container {
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: space-between;
+        /* padding: 20px; */
+      }
+      .contact-form {
+        flex: 1;
+        margin-right: 20px;
+      }
+      .contact-info {
+        flex: 1;
+        text-align: center;
+      }
+
+    }
+  </style>
+
   </head>
   <body>
     <h1 id = "name">Trojan Agency </h1>
@@ -159,8 +273,8 @@
     <div class="playstation">
       <h2>New Collaboration with Playstation</h2>
       <h3>- Marvel's Spiderman 2 -</h3>
-      <video width="568" height="432" controls>
-  <source src="/spiderman.mp4" type="video/mp4">
+      <video  controls>
+  <source src="spiderman.mp4" type="video/mp4">
   Your browser does not support the video tag.
 </video>
     </div>
