@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Stardew Valley Recreation</title>
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.4.2/lib/p5.js"></script>
+    <script src="sketch.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/IDMNYU/p5.js-speech@0.0.3/lib/p5.speech.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.2/addons/p5.sound.js"></script>
+  </head>
+  <style media="screen">
+    @font-face{
+      font-family:"stardewText";
+      src:url("text.ttf")format("truetype");
+    }
+    @font-face{
+      font-family:"stardewTitle";
+      src:url("title.ttf")format("truetype");
+    }
+    *{
+      background-color:#59C9F1;
+    }
+    h1{
+      font-family: "stardewTitle";
+      text-align:center;
+      color:#DDA059;
+      text-shadow:-2px -2px 3px #6B3710, 2px 2px 3px #6B3710,2px -2px 0px #6B3710, -2px -2px 0px #6B3710;
+    }
+    h2{
+      font-family:"stardewText";
+      text-align:center;
+      color:#DDA059;
+      text-shadow:-1px -1px 2px #6B3710, 1px 1px 2px #6B3710,1px -1px 0px #6B3710, -1px -1px 0px #6B3710;
+      font-size:40px;
+    }
+    #buttons{
+
+      text-align: center;
+      margin:auto;
+
+    }
+    p{
+      font-family:"stardewText";
+      font-size:25px;
+      text-align:justify;
+      margin-left:20%;
+      margin-right:20%;
+      color: #151152;
+
+    }
+    #buttons button{
+      background-color:#6B3710;
+      color:#DDA059;
+      font-family:"stardewText";
+      text-size:30px;
+      margin:8px;
+      border:2px solid #151152;
+      box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    }
+    #buttons button:hover{
+      background-color:#44af35;
+      color:black;
+      box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+    }
+
+
+    }
+  </style>
+  <body>
+    <h1>Stardew Valley Recreation</h1>
+    <h2>Group Members: Isabel Chai & Crystal Wu</h2>
+    <div id="buttons">
+      <button type="button" name="button" onclick = "changeToIns();">Instructions</button>
+    </div>
+    <div id = "canvas_container"></div>
+    <div class="">
+      <h2>Overview</h2>
+      <p>
+        Welcome to Stardew Valley Recreation. The user can move around the map with W/A/S/D keys and select different inventories corresponding to the number on the top. In the farm map, the user can do the following activities:<br><br>
+1. Plant seeds (cauliflower, potato, parsnip, bean).<br>
+2. Enter the shop to purchase things.<br>
+3. Raise chickens and cows through purchase in the animal shop.<br>
+4. Selling matured crops and animal products collected.<br><br>
+The user can purchase the plant seeds in Pierre’s shop by saying ‘cauliflower’/ ‘potato’ / ‘parsnip’ / ‘bean’ to the merchant and then choose the seed to buy. The different seeds will grow at different speeds and sell at different prices. The user can purchase chicken and cows on Marnie’s ranch and raise them on the farm. The chicken will lay eggs, and the cows will produce milk as time pass by. The user can sell animal products to gain money as well.
+If the user wants to plant the seed, they should follow the following steps:<br><br>
+1. Using hoe by clicking on the land<br>
+2. Using water by clicking on the land<br>
+3. Choose the seed in the inventory bar and click on the land<br>
+4. Wait for the seed to grow and collect the matured crops<br>
+5. Sell it with the bin<br>
+In order for better experience, we suggest you to keep saying words during the again to ensure the speechRec function to be available thorughout the game. 
+<br><br>
+We hope you enjoy the game and manage a lively farm here. Grow crops, raise animals as you wish, and purchase different items in the shop. GLHF!
+
+      </p>
+    </div>
+
+
+
+
+
+  </body>
+</html>
