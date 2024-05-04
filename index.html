@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Ziquan Chai</title>
+    <style media="screen">
+    @font-face {
+        font-family: 'MyFont';
+        src: url('font/font.ttf');
+
+    }
+    @font-face {
+        font-family: 'MyTitle';
+        src: url('font/title.ttf');
+
+    }
+    body {
+        line-height: 1.6;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+        background: #F6F5F1;
+    }
+
+    nav ul {
+      font-family: "MyFont";
+        display: flex;
+        list-style-type: none;
+        padding: 0;
+        justify-content: center;
+        align-items: center;
+        margin: 20px 0;
+    }
+
+    nav ul li {
+        margin: 0 40px;
+    }
+
+    nav ul li.logo img {
+        max-width: 100px;
+    }
+
+    nav ul li a {
+        text-decoration: none;
+        color: #333;
+        font-weight: bold;
+    }
+    nav ul li a:hover{
+      color:#E7D2CC;
+    }
+
+
+    main {
+        flex: 1; /* Allows the main content to grow and take up any remaining space */
+        width: 100%; /* Ensures it spans the entire width of the body */
+        justify-content: center;
+        margin-top:5%;
+    }
+
+    .card {
+        background: white;
+        padding: 20px;
+        box-shadow: 15px 15px 10px #ccc;
+        display: flex;
+        align-items: center;
+        margin: auto; /* Centers the card vertically and horizontally */
+        width:50%;
+    }
+    .card h1{
+      font-family: "MyTitle";
+      font-size: 400%;
+    }
+
+    .profile-photo {
+        flex-grow: 1;
+        width: 279.5px;
+        height: 279.5px;
+        /* border-radius: 50%; */
+        margin-right: 40px;
+        margin-left:40px;
+    }
+
+    .info {
+      flex-grow: 1;
+      width:50%;
+        text-align: left;
+        font-family: "MyFont";
+        font-size:13px;
+
+    }
+    .info p{
+      text-align: justify;
+      margin-right: 40px;
+    }
+
+
+    footer {
+        width: 100%;
+        background: #333;
+        color: white;
+        padding: 10px 0;
+        text-align: center;
+    }
+
+
+    </style>
+  </head>
+  <body>
+    <nav>
+        <ul>
+            <li><a href="about.html">About</a></li>
+            <li><a href="project.html">Projects</a></li>
+            <li class="logo"><img src="image/1.png" alt="Your Logo"></li>
+            <li><a href="photography.html">Photography</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+    <main>
+      <div class="card">
+            <div class="profile">
+                <img src="image/profile.jpeg" alt="Your Photo" class="profile-photo">
+            </div>
+            <div class="info">
+                <h1>柴子荃</h1>
+                <h3>based in LA & Shanghai</h3>
+                <p>欢迎来到我的网站！我是柴子荃，南加州大学传媒管理硕士研究生。我在纽约大学媒体、文化和交流学方面拥有丰富的背景知识。
+                  我的职业生涯涉及选角导演和执行导演等角色，在腾讯等主要媒体平台上的人才选拔和制作方面表现出色。我还运营着自己的小红书账号，创建了“WeChai”系列视频。
+                  我能说流利的普通话、英语和韩语，将不同的文化洞察融入我的工作中。</p>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>© 2024 Ziquan Chai</p>
+    </footer>
+  </body>
+</html>

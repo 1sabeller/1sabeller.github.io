@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Ziquan Chai</title>
+    <style media="screen">
+    @font-face {
+        font-family: 'MyFont';
+        src: url('font/1.ttf');
+
+    }
+    @font-face {
+        font-family: 'MyTitle';
+        src: url('font/2.ttf');
+
+    }
+    body {
+        line-height: 1.6;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+        background: #F6F5F1;
+
+    }
+
+    nav ul {
+      font-family: "MyFont";
+        display: flex;
+        list-style-type: none;
+        padding: 0;
+        justify-content: center;
+        align-items: center;
+        margin: 20px 0;
+    }
+
+    nav ul li {
+        margin: 0 40px;
+    }
+
+    nav ul li.logo img {
+        max-width: 100px;
+    }
+
+    nav ul li a {
+        text-decoration: none;
+        color: #333;
+        font-weight: bold;
+    }
+    nav ul li a:hover{
+      color:#E7D2CC;
+    }
+
+
+    main {
+        flex: 1; /* Allows the main content to grow and take up any remaining space */
+        width: 100%; /* Ensures it spans the entire width of the body */
+        justify-content: center;
+      
+    }
+    h1{
+      font-family: "MyTitle";
+      text-align: center;
+    }
+    .gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 10px;
+    width: 80%;
+    margin-left:10%;
+    /* padding: 20px; */
+    box-sizing: border-box;
+    margin-bottom: 5%;
+    }
+
+    .photo {
+        width: 100%;
+        height: auto;
+        transition: transform 0.3s ease;
+    }
+
+    .photo:hover {
+        transform: scale(1.05);
+        cursor: pointer;
+    }
+
+
+    footer {
+        width: 100%;
+        background: #333;
+        color: white;
+        padding: 10px 0;
+        text-align: center;
+    }
+
+
+    </style>
+  </head>
+  <body>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li class="logo"><img src="image/1.png" alt="Your Logo"></li>
+            <li><a href="project.html">Projects</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+    <main>
+      <h1>Photography</h1>
+      <div class="gallery">
+        <img src="image/DSCF1185.jpg" alt="Photo 1" class="photo">
+        <img src="image/DSCF2133.jpg" alt="Photo 2" class="photo">
+        <img src="image/DSCF2199.jpg" alt="Photo 3" class="photo">
+        <img src="image/DSCF2369.jpg" alt="Photo 4" class="photo">
+        <img src="image/DSCF2796.jpg" alt="Photo 5" class="photo">
+        <img src="image/DSCF3303.jpg" alt="Photo 6" class="photo">
+        <img src="image/DSCF3547.jpg" alt="Photo 1" class="photo">
+        <img src="image/DSCF3553.jpg" alt="Photo 2" class="photo">
+        <img src="image/DSCF3624.jpg" alt="Photo 3" class="photo">
+        <img src="image/DSCF3690.jpg" alt="Photo 4" class="photo">
+        <img src="image/DSCF3716.jpg" alt="Photo 5" class="photo">
+        <img src="image/DSCF3799.jpg" alt="Photo 6" class="photo">
+        <img src="image/DSCF3976.jpg" alt="Photo 1" class="photo">
+        <img src="image/DSCF4477.jpg" alt="Photo 2" class="photo">
+        <img src="image/DSCF4856.jpg" alt="Photo 3" class="photo">
+        <img src="image/DSCF5457.jpg" alt="Photo 4" class="photo">
+        <img src="image/DSCF5878.jpg" alt="Photo 5" class="photo">
+        <img src="image/DSCF6077.jpg" alt="Photo 6" class="photo">
+        <img src="image/DSCF6145.jpg" alt="Photo 1" class="photo">
+        <img src="image/DSCF6414.jpg" alt="Photo 2" class="photo">
+        <img src="image/DSCF6458.jpg" alt="Photo 3" class="photo">
+        <img src="image/DSCF6489.jpg" alt="Photo 4" class="photo">
+        <img src="image/DSCF6634.jpg" alt="Photo 5" class="photo">
+        <img src="image/DSCF6638.jpg" alt="Photo 6" class="photo">
+        <img src="image/DSCF6649.jpg" alt="Photo 1" class="photo">
+        <img src="image/DSCF6682.jpg" alt="Photo 3" class="photo">
+        <img src="image/DSCF7254.jpg" alt="Photo 4" class="photo">
+        <img src="image/DSCF7611.jpg" alt="Photo 5" class="photo">
+        <img src="image/DSCF7755.jpg" alt="Photo 6" class="photo">
+        <img src="image/DSCF8293.jpg" alt="Photo 1" class="photo">
+        <img src="image/DSCF8512.jpg" alt="Photo 2" class="photo">
+        <img src="image/DSCF8697.jpg" alt="Photo 3" class="photo">
+        <img src="image/DSCF9460.jpg" alt="Photo 4" class="photo">
+        <img src="image/DSCF9590.jpg" alt="Photo 5" class="photo">
+        <img src="image/DSCF9750.jpg" alt="Photo 6" class="photo">
+
+        <!-- Add more images as needed -->
+    </div>
+    </main>
+    <footer>
+        <p>© 2024 Ziquan Chai</p>
+    </footer>
+  </body>
+</html>

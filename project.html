@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Ziquan Chai</title>
+    <style media="screen">
+    @font-face {
+        font-family: 'MyFont';
+        src: url('font/font.ttf');
+
+    }
+    @font-face {
+        font-family: 'MyTitle';
+        src: url('font/title.ttf');
+
+    }
+    body {
+        line-height: 1.6;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+        background: #F6F5F1;
+    }
+
+    nav ul {
+      font-family: "MyFont";
+        display: flex;
+        list-style-type: none;
+        padding: 0;
+        justify-content: center;
+        align-items: center;
+        margin: 20px 0;
+    }
+
+    nav ul li {
+        margin: 0 40px;
+    }
+
+    nav ul li.logo img {
+        max-width: 100px;
+    }
+
+    nav ul li a {
+        text-decoration: none;
+        color: #333;
+        font-weight: bold;
+    }
+    nav ul li a:hover{
+      color:#E7D2CC;
+    }
+    <!-- main {
+        flex: 1; /* Allows the main content to grow and take up any remaining space */
+        width: 100%; /* Ensures it spans the entire width of the body */
+        justify-content: center;
+        margin-top:20px;
+    } -->
+    /* Main content and project styling */
+    main {
+        flex: 1;
+        padding: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+    }
+    h1{
+      font-family: "MyTitle";
+      text-align: center;
+    }
+
+    .container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 40px;
+
+
+    }
+    .project p{
+      font-family: "MyFont";
+      width:80%;
+      margin-left:10%;
+      text-align: center;
+      color:#868B8E;
+    }
+
+    .project {
+        background: #fff;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        padding: 10px;
+        text-align: center;
+        width: 25%; /* Fixed width for uniformity */
+
+    }
+
+    .project img {
+        width: 100%; /* Full width of the project container */
+        height: auto; /* Maintain aspect ratio */
+    }
+
+    .project a {
+        display: block;
+        margin-top: 10px;
+        color: #333;
+        text-decoration: none;
+        font-family: "MyTitle";
+    }
+
+    .project a:hover {
+        text-decoration: underline;
+    }
+
+
+
+    footer {
+        width: 100%;
+        background: #333;
+        color: white;
+        padding: 10px 0;
+        text-align: center;
+    }
+
+
+    </style>
+  </head>
+  <body>
+    <nav>
+        <ul>
+
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li class="logo"><img src="image/1.png" alt="Your Logo"></li>
+            <li><a href="photography.html">Photography</a></li>
+            <li><a href="#contact.html">Contact</a></li>
+        </ul>
+    </nav>
+    <h1>网页设计项目</h1>
+    <main>
+
+      <div class="container">
+        <div class="project">
+            <img src="image/project111.png" alt="Project 1">
+            <a href="projects/project1/index.html" target="_blank">《星露谷无语》模拟--></a>
+            <p>该项目是一款受到《星露谷物语》启发的农场模拟游戏，使用<span style="background-color: #E7D2CC;">p5.js</span>进行设计。
+这款游戏允许玩家执行各种农场相关活动，如种植种子、饲养牲畜以及销售农作物和动物产品。
+游戏还融入了如<span style="background-color: #E7D2CC;">语音识别</span>等高级功能，展示了将JavaScript的功能与p5.js结合使用，以实现动态的游戏体验的创新应用。</p>
+        </div>
+        <div class="project">
+            <img src="image/project22.png" alt="Project 2">
+            <a href="projects/project2/index.html" target="_blank">《俄罗斯方块》重制版--></a>
+            <p>这个项目是对经典游戏《俄罗斯方块》的创意重新想象，使用<span style="background-color: #E7D2CC;">p5.js</span> JavaScript库进行开发。它旨在唤起童年记忆，同时教导玩家如何有效地管理资源和协调相互冲突的利益。
+使用 p5.js 使得可以整合交互式元素和动态视觉效果，通过现代网络功能增强传统的游戏体验。游戏设计不仅侧重于娱乐，也着眼于通过游戏发展实用技能。</p>
+        </div>
+        <div class="project">
+            <img src="image/project33.png" alt="Project 3">
+            <a href="projects/project3/index.html" target="_blank">Flappy Bird--></a>
+            <p>这个项目是对流行游戏《Flappy Bird》的创意改编，融入了如<span style="background-color: #E7D2CC;">动作和颜色追踪</span>等高级功能。在这个版本中，玩家可以通过动作追踪技术使用左手或右手控制小鸟的上升或下降。此外，还有一个创新的“更改颜色”按钮，允许玩家通过捕捉游戏环境中选定区域的色调来改变小鸟的颜色。</p>
+        </div>
+        <div class="project">
+            <img src="image/project44.png" alt="Project 4">
+            <a href="projects/project4/index.html" target="_blank">3D 项目--></a>
+            <p>这是一个使用<span style="background-color: #E7D2CC;">p5.js</span>开发的创新应用程序，旨在创建一个动态的<span style="background-color: #E7D2CC;">3D家居模型</span>。该项目利用p5.js库的3D渲染功能，允许用户以交互方式从不同视角探索和可视化建筑设计。用户可以在虚拟空间中导航，体验家居的布局和设计特征，享受高度沉浸式的环境。</p>
+        </div>
+        <div class="project">
+            <img src="image/project55.png" alt="Project 5">
+            <a href="projects/project51/index.html" target="_blank">交互式聊天室平台--></a>
+            <p>这涉及创建一个交互式聊天室平台，使用户能够实时通信。利用<span style="background-color: #E7D2CC;">PHP语言</span>，该平台将允许用户创建自己的账户并加入实时聊天室，在那里他们可以与其他人互动。聊天室将具备如用户认证、<span style="background-color: #E7D2CC;">实时消息</span>传递和可定制用户档案等功能，使其成为在线通信的一个引人入胜且多功能的工具。 </p>
+        </div>
+        <div class="project">
+            <img src="image/project66.png" alt="Project 6">
+            <a href="projects/project6/index.php" target="_blank">辛普森角色测试--></a>
+            <p>这是一个引人入胜的角色匹配测验，它使用<span style="background-color: #E7D2CC;">PHP语言</span>，根据用户对一系列问题的回答，将用户与流行电视节目《辛普森一家》中的角色相连接。这个交互式工具分析用户输入，以确定他们最像哪个辛普森角色，提供有趣和个性化的体验。此外，该平台具有一个独特的功能，允许用户查看不同角色匹配的频率统计数据，并以百分比显示这些结果。 </p>
+        </div>
+    </div>
+    </main>
+    <footer>
+        <p>© 2024 Ziquan Chai</p>
+    </footer>
+  </body>
+</html>
