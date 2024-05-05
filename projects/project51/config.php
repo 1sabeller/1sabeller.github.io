@@ -1,0 +1,5 @@
+<?php
+
+  $path = getcwd() . '/database';
+
+ ?>

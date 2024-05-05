@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Let's Chat!</title>
+    <style media="screen">
+      @font-face {
+        font-family: black;
+        src: url(black.ttf);
+      }
+      @font-face {
+        font-family: bold;
+        src: url(bold.ttf);
+      }
+      @font-face {
+        font-family: thin;
+        src: url(thin.ttf);
+      }
+      h1{
+        font-family: black;
+        text-align: center;
+      }
+      h4{
+        font-family: black;
+        text-align: center;
+      }
+      form{
+        position:absolute;
+        left:50%;
+        transform: translate(-50%);
+        font-family: bold;
+        font-size: 12px;
+      }
+      #nickname{
+        margin:10px;
+        font-family: thin;
+      }
+      #pw{
+        margin:10px;
+        font-family: thin;
+      }
+      #button_login{
+        position:absolute;
+        left:50%;
+        transform: translate(-50%);
+        font-family: bold;
+        margin-bottom:10px;
+      }
+      #signup{
+        font-family: thin;
+        text-align: center;
+        margin-top:20px;
+        font-size: 12px;
+      }
+
+      #previous_messages{
+        width:100%;
+        height:300px;
+        resize:none;
+      }
+      #message{
+        margin-top: 20px;
+        font-family: bold;
+        position:absolute;
+        left:45%;
+        transform: translate(-45%);
+      }
+      #button_sendmessage{
+        margin-top: 20px;
+        position:absolute;
+        left:58%;
+        transform: translate(-58%);
+      }
+      .hidden{
+        display:none;
+      }
+      #alert,#fail{
+        color:white;
+        text-align: center;
+        font-family: bold;
+        background-color: red;
+        width:50%;
+        margin-left: auto;
+        margin-right: auto;
+      }
+    </style>
+    <script src = "helpers.js">
+
+    </script>
+  </head>
+  <body>
+    <h1>Let's Chat!</h1>
+
+    <h4 id = "login">Log In</h4>
+    <h4 id = 'chatroom' class = 'hidden'>Chat Room</h4>
+
+    <div id="alert" class='hidden'>
+      <p>Missing Username or Password!!</p>
+    </div>
+    <div id="fail" class='hidden'>
+      <p>Your Username or Password is incorrect!!</p>
+    </div>
+    <div id="panel_nickname" >
+      <!-- <input type="text" id='nickname' >
+       <button id="button_savenickname">Log In</button> -->
+
+     <form>
+       Username<br>
+       <input type="text" name="name" id='nickname'><br>
+       Password<br>
+       <input type="text" name="password" id = "pw"><br>
+       <input type="submit" id="button_login" value = "Log In"><br>
+       <p id ='signup'>Not A Member? <a href = "signup.php">SignUp</a><br>
+         <a id ='findpw' href="findPW.php">Forget Password?</a>
+       </p>
+
+     </form>
+
+    </div>
+
+    <div id="panel_chat" class="hidden">
+      <textarea id="previous_messages" readonly></textarea>
+      <input type="text" id="message">
+      <button id="button_sendmessage">Send Message</button>
+    </div>
+    <script>
+      //global varibales
+      let userNickname;
+      let userPW;
+      let isScrolling = false;
+
+      // scrolling
+      document.querySelector("#previous_messages").addEventListener('mouseenter', function() {
+        isScrolling = true;
+        console.log(  isScrolling);
+      });
+      document.querySelector("#previous_messages").addEventListener('mouseleave', function() {
+        isScrolling = false;
+        console.log(  isScrolling);
+      });
+
+      //figure out when the user saves their nickname
+      document.querySelector("#button_login").onclick = function(e){
+        e.preventDefault();
+        //store the nickname for future use
+        userNickname = document.querySelector("#nickname").value;
+        userPW = document.querySelector("#pw").value;
+
+        if(!userNickname || !userPW){
+          document.querySelector("#alert").classList.remove("hidden");
+          console.log(userNickname);
+          console.log(userPW);
+        }else{
+           checkLogIn();
+        }
+
+        // checkLogIn();
+
+      }
+
+      //when the user types in a new chat message
+      document.querySelector("#button_sendmessage").onclick = function(e){
+
+        //contact the server with our message AND our nickname
+        performFetch({
+          url:'api.php?command=save',
+          method:'post',
+          data:{
+            nickname:userNickname,
+            message: document.querySelector("#message").value
+          },
+          success: function(data){
+            console.log("SUCCESS");
+            // console.log(data);
+            if(data != "MISSINGDATA"){
+              document.querySelector("#previous_messages").value += data + '\n';
+              document.querySelector("#message").value = "";
+            }
+
+
+          },
+          error: function(error){
+            console.log("ERROR");
+          }
+        })
+
+      }
+
+      function checkLogIn(){
+        performFetch({
+          url:"login.php",
+          method:'POST',
+          data:{
+            username:userNickname,
+            password:userPW
+          },
+          success:function(data,status){
+            if(data ==='error'){
+              document.querySelector("#fail").classList.remove("hidden");
+            }else{
+              //hide the nickname panel
+              document.querySelector("#panel_nickname").classList.add("hidden");
+              document.querySelector("#alert").classList.add("hidden");
+              document.querySelector("#fail").classList.add("hidden");
+              document.querySelector("#login").classList.add("hidden");
+
+              //show the chat panel
+              document.querySelector("#panel_chat").classList.remove("hidden");
+              document.querySelector("#chatroom").classList.remove("hidden");
+            }
+            console.log("success");
+
+          },
+          error:function(error){
+            document.querySelector("#fail").classList.remove("hidden");
+            console.log("error");
+          }
+        })
+      }
+
+
+      function getAllMessages(){
+        performFetch({
+          url:'api.php',
+          method:'get',
+          data:{
+            command: 'get_all_messages'
+          },
+          success: function(data){
+            // console.log(data);
+
+            //take what the server gave us and turn it into a JS subject
+            data = JSON.parse(data);
+            // console.log(data);
+
+            document.querySelector("#previous_messages").value = '';
+            for (let i = 0; i < data.length; i++){
+              document.querySelector("#previous_messages").value += data[i] + '\n';
+            }
+            if (!isScrolling) {
+              console.log("E");
+                document.querySelector("#previous_messages").scrollTop =  document.querySelector("#previous_messages").scrollHeight;
+            }
+
+          },
+          error: function(error){
+            console.log(error);
+          }
+
+        })
+      }
+      setInterval(
+        getAllMessages,1000
+      );
+
+
+    </script>
+  </body>
+</html>
