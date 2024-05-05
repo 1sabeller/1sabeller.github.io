@@ -1,0 +1,523 @@
+{
+  "accessors": [
+    {
+      "bufferView": 2,
+      "componentType": 5126,
+      "count": 13719,
+      "max": [
+        0.9944599866867065,
+        0.9944601058959961,
+        0.9432599544525146
+      ],
+      "min": [
+        -0.9944599866867065,
+        -0.9944601058959961,
+        -0.9605322480201721
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 164628,
+      "componentType": 5126,
+      "count": 13719,
+      "max": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "min": [
+        -1.0,
+        -1.0,
+        -1.0
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 1,
+      "componentType": 5126,
+      "count": 13719,
+      "max": [
+        5.75,
+        5.647578716278076
+      ],
+      "min": [
+        -4.75,
+        -4.665391445159912
+      ],
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 0,
+      "componentType": 5125,
+      "count": 76350,
+      "type": "SCALAR"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 329256,
+      "componentType": 5126,
+      "count": 452,
+      "max": [
+        0.4661940634250641,
+        0.9853444695472717,
+        0.9378801584243774
+      ],
+      "min": [
+        0.3708150088787079,
+        -0.9853444695472717,
+        -0.9582404494285583
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 334680,
+      "componentType": 5126,
+      "count": 452,
+      "max": [
+        0.6658344864845276,
+        0.7775295972824097,
+        0.7942310571670532
+      ],
+      "min": [
+        -0.7915139198303223,
+        -0.7785444855690002,
+        -0.7488798499107361
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 1,
+      "byteOffset": 109752,
+      "componentType": 5126,
+      "count": 452,
+      "max": [
+        0.125,
+        0.7445589900016785
+      ],
+      "min": [
+        0.125,
+        0.5054410696029663
+      ],
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 0,
+      "byteOffset": 305400,
+      "componentType": 5125,
+      "count": 2622,
+      "type": "SCALAR"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 340104,
+      "componentType": 5126,
+      "count": 5407,
+      "max": [
+        1.219395399093628,
+        -0.2329222559928894,
+        0.47449374198913574
+      ],
+      "min": [
+        0.9313032627105713,
+        -0.7564730048179626,
+        0.26618754863739014
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 404988,
+      "componentType": 5126,
+      "count": 5407,
+      "max": [
+        0.9959610104560852,
+        0.999997615814209,
+        1.0
+      ],
+      "min": [
+        -0.999985933303833,
+        -0.999997615814209,
+        -1.0
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 1,
+      "byteOffset": 113368,
+      "componentType": 5126,
+      "count": 5407,
+      "max": [
+        0.8569237589836121,
+        1.0000001192092896
+      ],
+      "min": [
+        0.125,
+        0.0
+      ],
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 0,
+      "byteOffset": 315888,
+      "componentType": 5125,
+      "count": 27648,
+      "type": "SCALAR"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 469872,
+      "componentType": 5126,
+      "count": 3524,
+      "max": [
+        0.9735840559005737,
+        0.3043713867664337,
+        0.7405253648757935
+      ],
+      "min": [
+        0.9495593905448914,
+        -0.30986690521240234,
+        0.6676639914512634
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 512160,
+      "componentType": 5126,
+      "count": 3524,
+      "max": [
+        0.9876303672790527,
+        0.8376097679138184,
+        0.9998949766159058
+      ],
+      "min": [
+        -0.9986864328384399,
+        -0.8370577096939087,
+        -0.8551845550537109
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 1,
+      "byteOffset": 156624,
+      "componentType": 5126,
+      "count": 3524,
+      "max": [
+        1.0,
+        0.0
+      ],
+      "min": [
+        0.0,
+        0.0
+      ],
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 0,
+      "byteOffset": 426480,
+      "componentType": 5125,
+      "count": 20946,
+      "type": "SCALAR"
+    }
+  ],
+  "asset": {
+    "extras": {
+      "author": "dylanheyes (https://sketchfab.com/dylanheyes)",
+      "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+      "source": "https://sketchfab.com/3d-models/retro-fridge-3b130f0ba4304966a101c82be2429cc7",
+      "title": "Retro Fridge"
+    },
+    "generator": "Sketchfab-13.83.0",
+    "version": "2.0"
+  },
+  "bufferViews": [
+    {
+      "buffer": 0,
+      "byteLength": 510264,
+      "name": "floatBufferViews",
+      "target": 34963
+    },
+    {
+      "buffer": 0,
+      "byteLength": 184816,
+      "byteOffset": 510264,
+      "byteStride": 8,
+      "name": "floatBufferViews",
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 554448,
+      "byteOffset": 695080,
+      "byteStride": 12,
+      "name": "floatBufferViews",
+      "target": 34962
+    }
+  ],
+  "buffers": [
+    {
+      "byteLength": 1249528,
+      "uri": "scene.bin"
+    }
+  ],
+  "extensionsUsed": [
+    "KHR_materials_clearcoat"
+  ],
+  "images": [
+    {
+      "uri": "textures/Body_baseColor.jpeg"
+    }
+  ],
+  "materials": [
+    {
+      "doubleSided": true,
+      "name": "Body",
+      "pbrMetallicRoughness": {
+        "baseColorTexture": {
+          "index": 0
+        },
+        "metallicFactor": 0.0,
+        "roughnessFactor": 0.06999999999999995
+      }
+    },
+    {
+      "doubleSided": true,
+      "name": "Trim",
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "metallicFactor": 0.6572052063851308,
+        "roughnessFactor": 0.11032720831379461
+      }
+    },
+    {
+      "doubleSided": true,
+      "extensions": {
+        "KHR_materials_clearcoat": {
+          "clearcoatFactor": 1.0,
+          "clearcoatRoughnessFactor": 0.04
+        }
+      },
+      "name": "Handles",
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          0.8,
+          0.8,
+          0.8,
+          1.0
+        ],
+        "roughnessFactor": 0.19169086316917072
+      }
+    },
+    {
+      "doubleSided": true,
+      "extensions": {
+        "KHR_materials_clearcoat": {
+          "clearcoatFactor": 1.0,
+          "clearcoatRoughnessFactor": 0.04
+        }
+      },
+      "name": "Text",
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          0.06714979797214626,
+          0.04265159815596504,
+          0.04265159815596504,
+          1.0
+        ],
+        "metallicFactor": 0.29688044916846523,
+        "roughnessFactor": 0.0
+      }
+    }
+  ],
+  "meshes": [
+    {
+      "name": "Cube_Body_0",
+      "primitives": [
+        {
+          "attributes": {
+            "NORMAL": 1,
+            "POSITION": 0,
+            "TEXCOORD_0": 2
+          },
+          "indices": 3,
+          "material": 0,
+          "mode": 4
+        }
+      ]
+    },
+    {
+      "name": "Cube_Trim_0",
+      "primitives": [
+        {
+          "attributes": {
+            "NORMAL": 5,
+            "POSITION": 4,
+            "TEXCOORD_0": 6
+          },
+          "indices": 7,
+          "material": 1,
+          "mode": 4
+        }
+      ]
+    },
+    {
+      "name": "Cube_Handles_0",
+      "primitives": [
+        {
+          "attributes": {
+            "NORMAL": 9,
+            "POSITION": 8,
+            "TEXCOORD_0": 10
+          },
+          "indices": 11,
+          "material": 2,
+          "mode": 4
+        }
+      ]
+    },
+    {
+      "name": "Cube_Text_0",
+      "primitives": [
+        {
+          "attributes": {
+            "NORMAL": 13,
+            "POSITION": 12,
+            "TEXCOORD_0": 14
+          },
+          "indices": 15,
+          "material": 3,
+          "mode": 4
+        }
+      ]
+    }
+  ],
+  "nodes": [
+    {
+      "children": [
+        1
+      ],
+      "matrix": [
+        -1.0,
+        2.832769343193999e-16,
+        6.290011496532519e-32,
+        0.0,
+        0.0,
+        2.220446049250313e-16,
+        -1.0,
+        0.0,
+        -2.832769343193999e-16,
+        -1.0,
+        -2.220446049250313e-16,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "name": "Sketchfab_model"
+    },
+    {
+      "children": [
+        2
+      ],
+      "matrix": [
+        0.009999999776482582,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        -0.009999999776482582,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        -0.009999999776482582,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "name": "Retro Fridge.fbx"
+    },
+    {
+      "children": [
+        3
+      ],
+      "name": "RootNode"
+    },
+    {
+      "children": [
+        4,
+        5,
+        6,
+        7
+      ],
+      "matrix": [
+        -3.4319585669647404e-05,
+        210.65211486816128,
+        0.0,
+        0.0,
+        -242.6743927001921,
+        -3.953667692971592e-05,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        424.68017578125,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "name": "Cube"
+    },
+    {
+      "mesh": 0,
+      "name": "Cube_Body_0"
+    },
+    {
+      "mesh": 1,
+      "name": "Cube_Trim_0"
+    },
+    {
+      "mesh": 2,
+      "name": "Cube_Handles_0"
+    },
+    {
+      "mesh": 3,
+      "name": "Cube_Text_0"
+    }
+  ],
+  "samplers": [
+    {
+      "magFilter": 9729,
+      "minFilter": 9987,
+      "wrapS": 10497,
+      "wrapT": 10497
+    }
+  ],
+  "scene": 0,
+  "scenes": [
+    {
+      "name": "Sketchfab_Scene",
+      "nodes": [
+        0
+      ]
+    }
+  ],
+  "textures": [
+    {
+      "sampler": 0,
+      "source": 0
+    }
+  ]
+}
