@@ -1,0 +1,85 @@
+<!doctype html>
+<html>
+  <head>
+    <!-- load in the p5 core library -->
+
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.4.2/lib/p5.js"></script>
+    <script src="sketch.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.2/addons/p5.sound.js"></script>
+ <script src="https://unpkg.com/ml5@latest/dist/ml5.min.js"></script>
+
+    <style>
+    @font-face{
+      font-family:"birdRegular";
+      src:url("font1.ttf")format("truetype");
+    }
+    @font-face{
+      font-family:"birdText";
+      src:url("font2.ttf")format("truetype");
+    }
+    h1{
+      font-family: "birdRegular";
+      text-align: center;
+      font-size: 40px;
+    }
+    h2{
+      font-family:"birdRegular";
+      text-align: center;
+      font-size: 35px;
+    }
+    .buttons{
+      margin-left:18.5%;
+    }
+    button{
+      text-align: center;
+      margin-bottom:10px;
+      font-family:"birdText";
+      font-size:25px;
+      background-color: transparent;
+      box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    }
+    button:hover{
+      background-color: #528A2C;
+      color:white;
+    }
+    p{
+      text-align: justify;
+      margin-left:20%;
+      margin-right:20%;
+      font-family: "birdText";
+      font-size:25px;
+    }
+    img{
+      width:400px;
+      margin-left:35%;
+    }
+    </style>
+
+  </head>
+  <body>
+    <div id="title">
+      <h1>Flappy Birds</h1>
+    </div>
+    <div class="buttons">
+      <button type="button" onclick = "changeToIns();">INSTRUCTIONS</button>
+      <button type="button" onclick = "changeToCol();">CHANGE COLORS</button>
+    </div>
+    <div id="canvas_container">
+
+    </div>
+    <div id="overview">
+      <h2>OVERVIEW</h2>
+      <p>This project is a recreation of the game called Flappy Birds. Different front the original, this game adds the <span style = "color:#528A2C;">motion tracking</span> and <span style = "color:#FE9800;">color tracking </span>features.
+      Players will need to use their  <span style = "color:#528A2C;">left</span> or  <span style = "color:#528A2C;">right</span> hands to move the bird <span style = "color:#528A2C;">up</span> or <span style = "color:#528A2C;">down</span>
+    By clicking the "CHANGE COLORS" button on the top, the players will be able to change the bird's color. The program will <span style = "color:#FE9800;">catch the color</span> of the place where the players clicked (See Picture 1). There are three levels of the game and the differences between each levels are the distance between upper and lower obstacles. </p>
+    <img src="images/shot1.png" alt="">
+    <p style = "font-size:20px; text-align:center">Picture 1</p>
+      <p>My Process: </p>
+      <p>1. I firstly wrote the codes that integrated the live video into the website. Then, I resize the screen displayed and set the areas for the motion detection. I set the threshold to be 20 in order to make the bird move more quickly to avoid the obstacle. Then, I created the bird character that will be controlled by the motion tracking mechanism.</p>
+      <p>2. I created classes for coins and obstacles. Next, I made them start from the far right of the canvas and continuously move towards left. They will disappear after they reach the left side of the screen.</p>
+      <p>3. I created the points system, once the bird passes one obstacle, the point will be added one. Collecing one silver coin will add 1 point to the points of coins and collecting one gold coin wiull add 2 points to the points of conis. After the gave is over, the total points will be the points of passing obstacles plus the points of coins collected. Then, the players will receive a metal according to their points. I also use the local storage to track the highest point made by players</p>
+      <p>4. I created the color changing page, where users can click on the screen (which displayed what the webcam captured). The color tracking function will automatically get the rgb values of the place where the players clicked and the birds' color will change accordingly.</p>
+      <p>ENJOY THE GAME!!</p>
+    </div>
+  </body>
+</html>
