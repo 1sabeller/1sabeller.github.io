@@ -1,0 +1,62 @@
+<!doctype html>
+<html>
+  <head>
+    <!-- p5 core library -->
+		<script src="https://cdn.jsdelivr.net/npm/p5@1.3.1/lib/p5.js"></script>
+
+		<!-- A-Frame core library -->
+		<script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+
+		<!-- AFrameP5 library -->
+		<script src="https://craignyu.github.io/aframep5/libraries/aframep5-v2.1.js"></script>
+
+		<!-- Your p5 Sketch -->
+		<script src="sketch.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.2/addons/p5.sound.js"></script>
+
+		<!-- custom styles -->
+		<style>
+			body {
+				padding: 0;
+				margin: 0;
+			}
+		</style>
+  </head>
+  <body>
+    <a-scene id="VRScene">
+
+      <!--
+         The 'a-assets' container is used to load in any external artwork you may want to use as "textures" for your objects. Ensure that this element has an ID of 'VRAssets'
+
+         Textures can be loaded by creating a new 'a-asset' tag inside of the 'a-assets' container.
+         When doing this you will need to make sure to give your textures a unique ID -
+         this will be used by p5 to create new objects.
+
+         Example:
+
+         <img id="ITEM_ID_GOES_HERE" src="images/gold_block.png">
+      -->
+
+
+      <a-assets id="VRAssets">
+        <img src="images/floor1.png" id="woodFloor">
+        <img src="images/ground.png" id="ground">
+        <img src="images/wall.png" id="wall">
+        <img src="images/clothes.png" id="clothes">
+        <img src="images/door.png" id="door">
+        <img src="images/sky1.jpg" id="sky">
+        <a-asset id="house_obj" src="house.obj"></a-asset>
+				<a-asset id="house_mtl" src="house.mtl"></a-asset>
+        <a-asset id="house" src="house.glb"></a-asset>
+        <a-asset id="fridge" src="images/retro_fridge/scene.gltf"></a-asset>
+        <a-asset id="table" src="images/counter_table/scene.gltf"></a-asset>
+        <a-asset id="sofa" src="images/sofa/scene.gltf"></a-asset>
+        <a-asset id="tree" src="images/tree/scene.gltf"></a-asset>
+        <a-asset id="wardrobe" src="images/wardrobe/scene.gltf"></a-asset>
+        <a-asset id="bed" src="images/bed/scene.gltf"></a-asset>
+      </a-assets>
+
+    </a-scene>
+
+  </body>
+</html>
