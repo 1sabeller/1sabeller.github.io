@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+  <head>
+    <!-- load in the p5 core library -->
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.4.2/lib/p5.js"></script>
+
+    <script src="sketchRight.js"></script>
+
+    <!-- custom styles -->
+    <style>
+
+  #buttons button{
+       background-color:black;
+       color:white;
+       font-family:"pixel";
+       margin:8px;
+       box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+     }
+    </style>
+  </head>
+  <body>
+    <div id="buttons">
+      <button class = "instruction" onclick="changeStateToIns();">?</button>
+      <button class = "about" onclick='changeToAbout();'>AboutUS</button>
+    </div>
+
+  </body>
+</html>

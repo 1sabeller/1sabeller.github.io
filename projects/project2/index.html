@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.4.2/lib/p5.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.2/addons/p5.sound.js"></script>
+    <script type="text/javascript">
+      var points = 0;
+    </script>
+    <style media="screen">
+      @font-face{
+        font-family:"pixel";
+        src:url("pixel.ttf")format("truetype");
+      }
+      *{
+          font-family:"pixel";
+      }
+      .game{
+        background-color:white;
+        text-align:left;
+        border: solid 5px black;
+        border-radius: 15px 15px;
+
+        margin-left:27.5%;
+        margin-right:27.5%;
+        box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+      }
+        #sketchLeft {
+         width: 412px;
+         height: 650px;
+         border: none;
+         overflow: hidden;
+       }
+
+       #sketchRight {
+         width: 200px;
+         height: 650px;
+         border: none;
+         overflow: hidden;
+       }
+
+      h1{
+        margin-top:30px;
+        text-align:center;
+      }
+      h3{
+        text-align:center;
+      }
+
+      #preview{
+        text-align:justify;
+        margin-left:20%;
+        margin-right:20%;
+        margin-top:30px;
+      }
+
+    </style>
+    <title>Midterm Proposal</title>
+  </head>
+  <body>
+    <h1>Tetris Recreation</h1>
+
+    <div class="game">
+      <iframe id="sketchLeft" src="sketchLeft.html" scrolling="no"></iframe>
+      <iframe id="sketchRight" src="sketchRight.html" scrolling="no"></iframe>
+    </div>
+    <div id="preview">
+      <p>This game is a recreation of Tetris. The inspiration was really simple: it is a game full of childhood memories.
+      <br>Also, this game can also teach players to harmonize different interests and needs into a whole, and then eliminate them.</p>
+      <p> Here are some illustrations:</p>
+      <p>1. Timing -- The player needs to anticipate when the action will be needed.</p>
+      <p>2. Reflexes -- The player needs to make the right input when things and situations arise in a way that they can't predict</p>
+      <p>3. Resource Management -- Players need to integrate and manage their limited resources</p>
+      <p>4. Analytical skills -- The player needs to gather information, make internal logical connections, and find solutions to problems</p>
+      <p>Enjoy!</p>
+    </div>
+
+
+  </body>
+</html>
