@@ -25,13 +25,14 @@
     }
 
     nav ul {
-      font-family: "MyFont";
+        font-family: "MyFont";
         display: flex;
         list-style-type: none;
         padding: 0;
         justify-content: center;
         align-items: center;
         margin: 20px 0;
+        margin-left:9%;
     }
 
     nav ul li {
@@ -49,6 +50,23 @@
     }
     nav ul li a:hover{
       color:#E7D2CC;
+    }
+
+    .language-switch select {
+    font-family: "MyFont";
+    font-size: 15px;
+    padding:5px;
+    cursor: pointer;
+    border:none;
+    border-radius: 5px;
+    background-color: #F6F5F1;
+    color: #333;
+}
+
+    .language-switch select:hover {
+        border-color: #E7D2CC;
+        background-color: #E7D2CC;
+        color: white;
     }
 
 
@@ -91,6 +109,7 @@
 
     }
     .info p{
+      font-family:"MyFont";
       text-align: justify;
       margin-right: 40px;
     }
@@ -115,8 +134,23 @@
             <li class="logo"><img src="image/1.png" alt="Your Logo"></li>
             <li><a href="photography.html">Photography</a></li>
             <li><a href="#contact">Contact</a></li>
+            <li class="language-switch">
+                <select id="language-selector">
+
+                    <option value="index.html">中文</option>
+                    <option value="indexEN.html">English</option>
+                </select>
+            </li>
         </ul>
     </nav>
+
+    <script>
+        // Redirect the user based on the selected language
+        document.getElementById("language-selector").addEventListener("change", function () {
+            const selectedLanguage = this.value; // Get the selected option's value
+            window.location.href = selectedLanguage; // Redirect to the selected page
+        });
+    </script>
     <main>
       <div class="card">
             <div class="profile">
@@ -124,10 +158,8 @@
             </div>
             <div class="info">
                 <h1>柴子荃</h1>
-                <h3>based in LA & Shanghai</h3>
-                <p>欢迎来到我的网站！我是柴子荃，南加州大学传媒管理硕士研究生。我在纽约大学媒体、文化和交流学方面拥有丰富的背景知识。
-                  我的职业生涯涉及选角导演和执行导演等角色，在腾讯等主要媒体平台上的人才选拔和制作方面表现出色。我还运营着自己的小红书账号，创建了“WeChai”系列视频。
-                  我能说流利的普通话、英语和韩语，将不同的文化洞察融入我的工作中。</p>
+                <h3>based in Los Angeles & Shanghai</h3>
+                <p>Content Creator | Digital Marketer | <br>Social Media Strategist | USC & NYU Alum | <br>Previous Casting Director with Proven Track Record</p>
             </div>
         </div>
     </main>
