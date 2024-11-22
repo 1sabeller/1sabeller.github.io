@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Ziquan Chai</title>
+    <style media="screen">
+    @font-face {
+        font-family: 'MyFont';
+        src: url('font/font.ttf');
+
+    }
+    @font-face {
+        font-family: 'MyTitle';
+        src: url('font/title.ttf');
+
+    }
+
+    @font-face {
+        font-family: 'MyTitleEN';
+        src: url('font/DancingScript-Bold.ttf');
+
+    }
+    @font-face {
+        font-family: 'MyFontEN';
+        src: url('font/Lora-VariableFont_wght.ttf');
+
+    }
+    @font-face {
+        font-family: 'MyFontENBold';
+        src: url('font/fontENBold.ttf');
+
+    }
+    body {
+        line-height: 1.6;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+        background: #F6F5F1;
+    }
+
+    nav ul {
+        font-family: "MyFontEN";
+        display: flex;
+        list-style-type: none;
+        padding: 0;
+        justify-content: center;
+        align-items: center;
+        margin: 20px 0;
+        margin-left:9%;
+    }
+
+    nav ul li {
+        margin: 0 40px;
+    }
+
+    nav ul li.logo img {
+        max-width: 100px;
+    }
+
+    nav ul li a {
+        text-decoration: none;
+        color: #333;
+        font-weight: bold;
+    }
+    nav ul li a:hover{
+      color:#E7D2CC;
+    }
+
+    .language-switch select {
+    font-family: "MyFontEN";
+    font-size: 15px;
+    padding:5px;
+    cursor: pointer;
+    border:none;
+    border-radius: 5px;
+    background-color: #F6F5F1;
+    color: #333;
+}
+
+    .language-switch select:hover {
+        border-color: #E7D2CC;
+        background-color: #E7D2CC;
+        color: white;
+    }
+    <!-- main {
+        flex: 1; /* Allows the main content to grow and take up any remaining space */
+        width: 100%; /* Ensures it spans the entire width of the body */
+        justify-content: center;
+        margin-top:20px;
+    } -->
+    /* Main content and project styling */
+    main {
+        flex: 1;
+        padding: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+    }
+    h1{
+      font-family: "MyTitleEN";
+      text-align: center;
+    }
+
+    .container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 40px;
+
+
+    }
+    .project p{
+      font-family: "MyFontEN";
+      font-weight: lighter;
+      width:80%;
+      margin-left:10%;
+      text-align: justify;
+      color:#868B8E;
+    }
+
+    .project {
+        background: #fff;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        padding: 10px;
+        text-align: center;
+        width: 25%; /* Fixed width for uniformity */
+
+    }
+
+    .project img {
+        width: 100%; /* Full width of the project container */
+        height: auto; /* Maintain aspect ratio */
+    }
+
+    /* .project a {
+        display: block;
+        margin-top: 10px;
+        color: #333;
+        text-decoration: none;
+        font-family: "MyTitleEN";
+        font-size:20px;
+    } */
+
+    /* .project a:hover {
+        text-decoration: underline;
+    } */
+    .project-link {
+      font-size: 1.3rem;
+      margin-top:10px;
+      font-family: "MyTitleEN";
+      font-weight: bold;
+      color: #333;
+      text-decoration: none;
+      position: relative;
+      cursor: pointer;
+    }
+
+    .project-link::after {
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 2px;
+        background-color: #E07A5F;
+        bottom: -2px;
+        left: 0;
+        transition: width 0.3s ease;
+    }
+
+    .project-link:hover::after {
+        width: 100%;
+    }
+
+    footer {
+        width: 100%;
+        background: #333;
+        color: white;
+        padding: 10px 0;
+        text-align: center;
+    }
+
+
+    </style>
+  </head>
+  <body>
+    <nav>
+        <ul>
+
+            <li><a href="indexEN.html">Home</a></li>
+            <li><a href="aboutEN.html">About</a></li>
+            <li class="logo"><img src="image/1.png" alt="Your Logo"></li>
+            <li><a href="photographyEN.html">Photography</a></li>
+            <li><a href="contactEN.html">Contact</a></li>
+            <li class="language-switch">
+                <select id="language-selector">
+                    <option value="projectEN.html">English</option>
+                    <option value="project.html">中文</option>
+
+                </select>
+            </li>
+        </ul>
+    </nav>
+
+    <script>
+        // Redirect the user based on the selected language
+        document.getElementById("language-selector").addEventListener("change", function () {
+            const selectedLanguage = this.value; // Get the selected option's value
+            window.location.href = selectedLanguage; // Redirect to the selected page
+        });
+    </script>
+    <h1>Web Design Projects</h1>
+    <main>
+
+      <div class="container">
+        <div class="project">
+            <img src="image/project111.png" alt="Project 1">
+            <a href="projects/project1/index.html" target="_blank" class = "project-link">Stardew Valley Simulation <span class="icon">→</span></a>
+            <p>This project is a farm simulation game inspired by Stardew Valley and designed using <span style="color:#E07A5F; font-weight:bold;">p5.js</span>.
+              The game allows players to perform various farming activities, such as planting seeds, raising livestock, and selling crops and animal products.
+              Advanced features like <span style="color:#E07A5F; font-weight:bold;">voice recognition</span> have been integrated, showcasing the innovative application of JavaScript combined with p5.js to deliver a dynamic and interactive gaming experience.</p>
+        </div>
+        <div class="project">
+            <img src="image/project22.png" alt="Project 2">
+            <a href="projects/project2/index.html" target="_blank" class = "project-link">Tetris Simulation <span class="icon">→</span></a>
+            <p>This project is a creative reimagination of the classic game Tetris, developed using the <span style="color:#E07A5F; font-weight:bold;">p5.js</span> JavaScript library.
+              It aims to evoke childhood nostalgia while teaching players how to effectively manage resources and balance competing interests.
+              By leveraging p5.js, the game integrates interactive elements and dynamic visual effects, enhancing the traditional gaming experience with modern web functionalities.
+              The design focuses not only on entertainment but also on fostering practical skills through gameplay.</p>
+        </div>
+        <div class="project">
+            <img src="image/project33.png" alt="Project 3">
+            <a href="projects/project3/index.html" target="_blank" class = "project-link">Flappy Bird <span class="icon">→</span></a>
+            <p>This project is a creative adaptation of the popular game Flappy Bird, incorporating advanced features like <span style="color:#E07A5F; font-weight:bold;">motion and color tracking</span>.
+              In this version, players can use motion tracking technology to control the bird's ascent or descent with their left or right hand.
+              Additionally, an innovative "Change Color" button allows players to alter the bird's color by capturing the hue from a selected area in the game environment, adding a unique interactive element to the gameplay.</p>
+        </div>
+        <div class="project">
+            <img src="image/project44.png" alt="Project 4">
+            <a href="projects/project4/index.html" target="_blank" class = "project-link">3D Project <span class="icon">→</span></a>
+            <p>This is an innovative application developed using <span style="color:#E07A5F; font-weight:bold;">p5.js</span>, designed to create a dynamic <span style="color:#E07A5F; font-weight:bold;">3D home model</span>.
+              The project leverages the 3D rendering capabilities of the p5.js library, allowing users to interactively explore and visualize architectural designs from various perspectives.
+              Users can navigate the virtual space, experience the layout and design features of the home, and enjoy a highly immersive environment.</p>
+        </div>
+        <div class="project">
+            <img src="image/project55.png" alt="Project 5">
+            <a href="projects/project51/index.html" target="_blank" class = "project-link">Interactive Chatroom Platform <span class="icon">→</span></a>
+            <p>This involves creating an interactive chatroom platform that enables real-time communication. Developed using <span style="color:#E07A5F; font-weight:bold;">PHP</span>, the platform allows users to create their own accounts and join live chatrooms where they can interact with others.
+              Key features include user authentication, <span style="color:#E07A5F; font-weight:bold;">real-time messaging</span>, and customizable user profiles, making it an engaging and versatile tool for online communication. </p>
+        </div>
+        <div class="project">
+            <img src="image/project66.png" alt="Project 6">
+            <a href="projects/project6/index.php" target="_blank" class = "project-link">Simpson Character Test <span class="icon">→</span></a>
+            <p>This is an engaging character-matching quiz developed using <span style="color:#E07A5F; font-weight:bold;">PHP</span>. Based on user responses to a series of questions, the tool connects users with characters from the popular TV show The Simpsons.
+              This interactive platform analyzes user input to determine which Simpson character they resemble the most, delivering a fun and personalized experience.
+              Additionally, it features a unique option to view frequency statistics for different character matches, displaying these results as percentages for added insight and enjoyment. </p>
+        </div>
+    </div>
+    </main>
+    <footer>
+        <p>© 2024 Ziquan Chai</p>
+    </footer>
+  </body>
+</html>

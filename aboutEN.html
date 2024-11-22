@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Ziquan Chai</title>
+    <style media="screen">
+    @font-face {
+        font-family: 'MyFont';
+        src: url('font/font.ttf');
+
+    }
+    @font-face {
+        font-family: 'MyTitle';
+        src: url('font/title.ttf');
+
+    }
+    @font-face {
+        font-family: 'MyTitleEN';
+        src: url('font/PlayfairDisplay-BlackItalic.ttf');
+
+    }
+    /* @font-face {
+        font-family: 'MyTitleEN';
+        src: url('font/DancingScript-Bold.ttf');
+
+    } */
+    @font-face {
+        font-family: 'MyTitleEN';
+        src: url('font/DancingScript-Bold.ttf');
+
+    }
+    @font-face {
+        font-family: 'MyFontEN';
+        src: url('font/Lora-VariableFont_wght.ttf');
+
+    }
+    @font-face {
+        font-family: 'MyFontENBold';
+        src: url('font/fontENBold.ttf');
+
+    }
+    body {
+        line-height: 1.6;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+        background: #F6F5F1;
+    }
+
+    nav ul {
+        font-family: "MyFontEN";
+        display: flex;
+        list-style-type: none;
+        padding: 0;
+        justify-content: center;
+        align-items: center;
+        margin: 20px 0;
+        margin-left:9%;
+    }
+
+    nav ul li {
+        margin: 0 40px;
+    }
+
+    nav ul li.logo img {
+        max-width: 100px;
+    }
+
+    nav ul li a {
+        text-decoration: none;
+        color: #333;
+        font-weight: bold;
+    }
+    nav ul li a:hover{
+      color:#E7D2CC;
+    }
+
+    .language-switch select {
+    font-family: "MyFontEN";
+    font-size: 15px;
+    padding:5px;
+    cursor: pointer;
+    border:none;
+    border-radius: 5px;
+    background-color: #F6F5F1;
+    color: #333;
+}
+
+    .language-switch select:hover {
+        border-color: #E7D2CC;
+        background-color: #E7D2CC;
+        color: white;
+    }
+    header {
+    background: #333;
+    padding: 20px;
+    text-align: center;
+}
+
+    .profile-photo {
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+    }
+
+
+    main {
+        flex: 1; /* Allows the main content to grow and take up any remaining space */
+        width: 100%; /* Ensures it spans the entire width of the body */
+        justify-content: center;
+        /* margin-top:5%; */
+        text-align: center;
+    }
+
+    h2{
+      font-family: "MyTitleEN";
+    }
+    section {
+        margin: 20px auto;
+        padding: 20px;
+        background: white;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        width: 80%;
+    }
+    #whoiam p{
+      font-family: "MyFontEN";
+      width:80%;
+      margin-left:10%;
+      text-align: justify;
+    }
+    #professional h4{
+      font-family: "MyTitleEN";
+    }
+
+    .school{
+      display:flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 5%;
+    }
+    .school img{
+      width:30%;
+    }
+    .school p{
+      text-align: justify;
+      font-family: "MyFontEN";
+    }
+
+
+    #programs p{
+      font-family: "MyFontEN";
+    }
+
+    /* #professional img{
+      height:500px; */
+    }
+    /* img {
+        max-width: 100%;
+        height: auto;
+        padding: 10px 0;
+    } */
+    /* Flipping Carousel Container */
+  #professional {
+  margin: 20px auto;
+  padding: 20px;
+  background: white;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  width: 80%;
+  text-align: center;
+}
+
+#professional h2 {
+  font-family: "MyTitleEN";
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+#professional h3{
+  font-family:"MyFontENBold";
+}
+
+.casetify .flipping-carousel {
+  display: flex; /* Enables Flexbox layout */
+  flex-wrap: wrap; /* Allows cards to wrap to the next line */
+  justify-content: center; /* Centers the cards horizontally */
+  gap: 10px; /* Adds spacing between the cards */
+}
+.ymkx .flipping-carousel {
+  display: flex; /* Enables Flexbox layout */
+  flex-wrap: wrap; /* Allows cards to wrap to the next line */
+  justify-content: center; /* Centers the cards horizontally */
+  gap: 15px; /* Adds spacing between the cards */
+}
+#programs .flipping-carousel {
+  display: flex; /* Enables Flexbox layout */
+  flex-wrap: wrap; /* Allows cards to wrap to the next line */
+  justify-content: center; /* Centers the cards horizontally */
+  gap: 10px; /* Adds spacing between the cards */
+}
+.flip-card {
+  width: calc(33.33% - 15px); /* Each card takes up 1/3 of the container width (with spacing) */
+  max-width: 300px; /* Optional: Limit the maximum width */
+  min-width: 250px; /* Optional: Ensure a minimum width for smaller screens */
+  height: 400px; /* Fixed height for all cards */
+  color:#F6F5F1;
+  font-family: "MyFontEN";
+  margin:3%;
+
+}
+
+
+.flip-card-inner {
+  position: relative;
+  width: 90%;
+  height: 104%;
+  text-align: left;
+
+  transition: transform 0.6s; /* Smooth flipping animation */
+  transform-style: preserve-3d; /* Enables 3D transform */
+}
+
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg); /* Flip animation on hover */
+}
+
+/* Front and back faces of the flip card */
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden; /* Hides the back when front is visible */
+  border-radius: 10px; /* Rounded corners */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+}
+
+.flip-card-front img,
+.flip-card-back img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+.flip-card-front {
+  background: #333;
+}
+
+.flip-card-back {
+  background: #333;
+  transform: rotateY(180deg); /* Rotate the back face */
+}
+
+
+
+    footer {
+        width: 100%;
+        background: #333;
+        color: white;
+        padding: 10px 0;
+        text-align: center;
+    }
+
+    </style>
+  </head>
+  <body>
+    <nav>
+        <ul>
+            <li><a href="indexEN.html">Home</a></li>
+            <li><a href="projectEN.html">Projects</a></li>
+            <li class="logo"><img src="image/1.png" alt="Your Logo"></li>
+            <li><a href="photographyEN.html">Photography</a></li>
+            <li><a href="contactEN.html">Contact</a></li>
+            <li class="language-switch">
+                <select id="language-selector">
+                    <option value="aboutEN.html">English</option>
+                    <option value="about.html">中文</option>
+                </select>
+            </li>
+        </ul>
+    </nav>
+
+    <script>
+        // Redirect the user based on the selected language
+        document.getElementById("language-selector").addEventListener("change", function () {
+            const selectedLanguage = this.value; // Get the selected option's value
+            window.location.href = selectedLanguage; // Redirect to the selected page
+        });
+    </script>
+    <header>
+        <img src="image/profile1.jpeg" alt="Your Photo" class="profile-photo">
+    </header>
+    <main>
+      <section id="whoiam">
+            <h2>Who I Am</h2>
+            <p>Hello! I’m Isabel Chai, an experienced marketing and communication professional passionate about creating meaningful connections through innovative storytelling.
+              My expertise lies in blending digital marketing strategies with engaging content creation to effectively reach and influence diverse audiences.
+              With a Master’s degree in Applied Communication Research from <span style="color:#990000; font-weight:bold">the University of Southern California</span>, I have honed my skills in international entertainment marketing and influencer strategies, mastering cross-cultural campaign execution.
+              Whether it’s curating impactful media projects or leading marketing initiatives, my goal is to transform how brands communicate in the digital age.</p>
+        </section>
+        <section id="academic">
+            <h2>Academic Background</h2>
+            <div class="school">
+              <img src="image/nyu.png" alt="Academic Image 1">
+              <p>I have a solid academic background in communication management. I am pursuing my Master’s degree at the <span style="color:#990000; font-weight:bold">University of Southern California</span> Annenberg School for Communication and Journalism, specializing in influencer strategies and data analysis.
+                Previously, I completed my undergraduate studies at the <span style="color:#57068c; font-weight:bold">New York University</span> Steinhardt School of Culture, Education, and Human Development, majoring in Media, Culture, and Communication, with minors in Korean and Web Design, graduating with a 3.8 GPA.
+                My academic journey provided me with both practical experience and theoretical knowledge, enabling a deep understanding of media dynamics and markets in a global context.
+              </p>
+              <img src="image/usc.png" alt="Academic Image 2">
+            </div>
+        </section>
+        <section id = 'professional'>
+          <h2>Professional Experience</h2>
+          <div class="casetify">
+            <h3>CASETiFY
+            <br>Influencer Marketing</h3>
+            <div class="flipping-carousel">
+              <div class="flip-card">
+                <div class="flip-card-inner">
+                  <div class="flip-card-front">
+                    <img src="image/case1.png" alt="seeding">
+                    <p>Celebrity/Influencer Seeding</p>
+                  </div>
+                  <div class="flip-card-back">
+
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Independently identified and coordinated with 25+ influencers monthly, aligning with brand values and fostering long-term partnerships.
+                      <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Successful collaborations included celebrities such as Wang Hongyi and Greg Hsu. Analyzed exposure data of influencer campaigns, achieving an average monthly seeding note interaction rate exceeding 15% (excluding celebrity endorsements). </p>
+                  </div>
+                </div>
+              </div>
+              <div class="flip-card">
+                <div class="flip-card-inner">
+                  <div class="flip-card-front">
+                    <img src="image/case2.png" alt="超机智青年大会">
+                    <p>TikTok 365 Campaign</p>
+                  </div>
+                  <div class="flip-card-back">
+                    <p style = "font-size: 15px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Managed the monthly TikTok 365 Campaign, creating differentiated frameworks and content strategies tailored to product selling points. Selected high-quality influencers aligned with brand values using the Xingtu platforms.
+                      <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Optimized content strategies through data analysis, achieving over 4 million monthly exposures on average (200% above target), record-low CPM, a 308% increase in A3 conversions, and a 507.14% overall growth in 5A metrics. Conducted data analysis and reviews, complemented by Ad and promotions to maximize campaign effectiveness. </p>
+                  </div>
+                </div>
+              </div>
+
+            <div class="flip-card">
+              <div class="flip-card-inner">
+                <div class="flip-card-front">
+                  <img src="image/case3.png" alt="超机智青年大会">
+                  <p>Olympic Campaign</p>
+                </div>
+                <div class="flip-card-back">
+                  <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Led the Olympic Campaign by creating briefs for offline events, aligning with brand identity, Olympic themes, and budget. Invited and coordinated with 20+ influencers for online promotions and offline event coverage.
+                    <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Manage pre-event content reviews and post-event article publishing, optimizing titles, content, and visuals to enhance engagement. Successfully facilitated offline event workflows, assisting influencers with content creation to ensure smooth execution and high-quality deliverables. </p>
+                </div>
+              </div>
+            </div>
+            <div class="flip-card">
+              <div class="flip-card-inner">
+                <div class="flip-card-front">
+                  <img src="image/case4.png" alt="超机智青年大会">
+                  <p>Product Launch</p>
+                </div>
+                <div class="flip-card-back">
+                  <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Contributed to the launch of collaborative products between Uncle Daniel, Wilde, Korean artist Emma Kang, and CASETiFY, overseeing product design reviews and the entire online release process. Led the planning of offline pop-up openings and product line layouts.
+                    <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Assisted in creating promotional content for the Stanley X CASETiFY collaboration, optimizing campaign performance to enhance product visibility and user engagement.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          </div>
+          <div class = "ymkx">
+            <h3>Shanghai Yomix Media Co.
+            <br> Casting Director / Executive Director</h3>
+
+            <div class="flipping-carousel">
+              <div class="flip-card">
+                <div class="flip-card-inner">
+                  <div class="flip-card-front">
+                    <img src="image/prof1.png" alt="令人心动的offer第五季">
+                    <p>Exciting Offer Season 5 (Casting)</p>
+                  </div>
+                  <div class="flip-card-back">
+
+                    <p style = "font-size:14px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;“The Exciting Offer 5” is a popular workplace observational reality show produced by Tencent.
+                      The show follows the internship experiences of young professionals in a law firm, showcasing the challenges of workplace competition and personal growth.
+
+                      <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;As the casting director for this season, I was responsible for selecting contestants who aligned with the show's tone.
+                      Out of a total of 9 contestants, I successfully recommended 5, including Huang Kai, whose fan base grew by over 1 million within a month of the show’s broadcast.
+                      Additionally, the program achieved an impressive 4.6 billion views on its IP, becoming a highly-discussed and trendsetting show.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="flip-card">
+                <div class="flip-card-inner">
+                  <div class="flip-card-front">
+                    <img src="image/prof2.png" alt="超机智青年大会">
+                    <p>Super Brain Youth Alliance (Casting)</p>
+                  </div>
+                  <div class="flip-card-back">
+                    <p style = "font-size:14px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;“Super Brain Youth Alliance” is a variety show launched by Youku that uses fun and challenging game segments to highlight the intelligence and teamwork of young participants. The program combines entertainment and positivity, making it highly popular among younger audiences.
+                      <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;In the latter half of the show, I joined the project as a casting director. The team needed to select 6 contestants from a large pool of candidates, and I successfully recommended 2 of them. My precise understanding of the show’s tone and the contestants’ characteristics significantly contributed to the program’s success and audience appeal.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="flip-card">
+                <div class="flip-card-inner">
+                  <div class="flip-card-front">
+                    <img src="image/prof3.png" alt="超机智青年大会">
+                    <p>Youth Partner (Casting）</p>
+                  </div>
+                  <div class="flip-card-back">
+
+                    <p style = "font-size:14px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;“Amazing Workers” is a reality show produced by Youku that captures the real work experiences of participants in various professions. The program highlights the struggles and resilience of modern workers, offering meaningful insights and relatable stories to its audience.
+                      <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;This was my first project as a casting director, where the team needed to select 8 participants. I successfully recommended 2 of them. One of the participants gained significant recognition for their performance on the show and was later invited to join another popular Youku program, “Island Youth”, further enhancing their influence. This experience was invaluable in helping me build expertise in casting.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+            <div class="flip-card">
+              <div class="flip-card-inner">
+                <div class="flip-card-front">
+                  <img src="image/prof4.png" alt="超机智青年大会">
+                  <p>CHUANG ASIA (Casting)</p>
+                </div>
+                <div class="flip-card-back">
+
+                  <p style = "font-size:14px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;“CHUANG ASIA” is a special season of the CHUANG series by Tencent Video, designed for the international market. The program aims to discover and unite talented young artists worldwide to form a globally-oriented idol group. It incorporates diverse cultural backgrounds, showcasing the talents and charm of youth from Southeast Asia and other regions in Asia.
+                    <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;During my involvement in the “CHUANG ASIA” project, I established connections with several Southeast Asian artists, including Alissa Janine and members of SGO 48. These collaborations not only expanded the program's influence in the Southeast Asian market but also added more international elements to the show, boosting its appeal to overseas audiences.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="flip-card">
+              <div class="flip-card-inner">
+                <div class="flip-card-front">
+                  <img src="image/prof5.png" alt="超机智青年大会">
+                  <p>The Next 2023 (Executive)</p>
+                </div>
+                <div class="flip-card-back">
+
+                  <p style = "font-size:14px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;“The Next 2023” is a music competition show produced by Tencent Video, showcasing diverse stage performances that highlight the creative talents and stage presence of top musicians and emerging artists. The program brings together renowned musicians from around the world, delivering a high-level musical feast for audiences.
+
+                    <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;During my involvement in the project, I was responsible for coordinating the filming process between artists and the production team. This included working with internationally acclaimed artists such as Jackson Wang and Jay Park. I facilitated effective communication and collaboration between the artists and the team, ensuring smooth execution of the filming schedule and contributing significantly to the high production quality of the program.</p>
+                </div>
+              </div>
+            </div>
+            <div class="flip-card">
+              <div class="flip-card-inner">
+                <div class="flip-card-front">
+                  <img src="image/prof6.png" alt="超机智青年大会">
+                  <p>Super Novae Games (Executive)</p>
+                </div>
+                <div class="flip-card-back">
+
+                  <p style = "font-size:14px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;“Super Novae Games Season 4” is a sports reality show produced by Tencent Video. Featuring various star artists competing in athletic events, the program highlights youthful energy and the spirit of perseverance. With teamwork and the excitement of competition at its core, the show has captured the attention of a large young audience.
+                    <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;During my time on the “Supernova Games Season 4” project, I was responsible for coordinating the program's live broadcasts and branded live streaming sessions involving over 100 artists. This included notable performers such as INTO1, Amber Liu, and Lil Jet (Li Jialong). My work ensured the seamless execution of all stages, significantly enhancing the production efficiency and quality of live broadcasts while boosting the visibility and impact of brand collaborations.</p>
+                </div>
+              </div>
+            </div>
+        </div>
+      </div>
+
+
+
+        </section>
+        <section id="programs">
+          <h2>Personal Social Media Operation
+            <br> <span style = "font-family:\n"MyFontENBold\n"">@1sabeller</span></h2>
+          <div class="flipping-carousel">
+            <div class="flip-card">
+              <div class="flip-card-inner">
+                <div class="flip-card-front">
+                  <img src="image/prog1.png" alt="seeding">
+                  <p>WeChai - Wang Yiyanyu Episode</p>
+                </div>
+                <div class="flip-card-back">
+                  <p><span style = "font-weight:bold">《WeChai》- Wang Yiyanyu Episode</span><br><br>
+                    Released on April 7, 2024, this video garnered 153,400 views, along with 71 comments, 4,480 likes, and 793 saves, resulting in a fan growth of 897 followers within 21 days.</p>
+                </div>
+              </div>
+            </div>
+            <div class="flip-card">
+              <div class="flip-card-inner">
+                <div class="flip-card-front">
+                  <img src="image/prog2.png" alt="超机智青年大会">
+                  <p>WeChai - Hu Minghao Episode</p>
+                </div>
+                <div class="flip-card-back">
+                  <p> <span style ="font-weight:bold">《WeChai》- Hu Minghao Episode</span><br><br>
+                    Released on April 13, 2024, this video achieved 36,600 views, along with 63 comments, 1,190 likes, and 246 saves, resulting in a fan growth of 165 followers within 14 days.</p>
+                </div>
+              </div>
+            </div>
+            <p style = "width:80%">Leveraging my unique perspective as a former casting director, I created a video series called “WeChai,” inviting individuals who became influencers through Chinese reality shows to participate. The series offers an in-depth exploration of China’s reality show industry, providing aspiring participants and a broader audience with valuable insights into the entertainment world.</p>
+        </section>
+    </main>
+    <footer>
+        <p>© 2024 Ziquan Chai</p>
+    </footer>
+  </body>
+</html>

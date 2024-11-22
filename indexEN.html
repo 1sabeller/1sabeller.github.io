@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Ziquan Chai</title>
+    <style media="screen">
+    @font-face {
+        font-family: 'MyFont';
+        src: url('font/font.ttf');
+
+    }
+
+    @font-face {
+        font-family: 'MyTitle';
+        src: url('font/title.ttf');
+
+    }
+
+    /* @font-face {
+        font-family: 'MyTitleEN';
+        src: url('font/PlayfairDisplay-BlackItalic.ttf');
+
+    } */
+    @font-face {
+        font-family: 'MyTitleEN';
+        src: url('font/DancingScript-Bold.ttf');
+
+    }
+    @font-face {
+        font-family: 'MyFontEN';
+        src: url('font/Lora-VariableFont_wght.ttf');
+
+    }
+    @font-face {
+        font-family: 'MyFontENBold';
+        src: url('font/fontENBold.ttf');
+
+    }
+    body {
+        line-height: 1.6;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+        background: #F6F5F1;
+    }
+
+    nav ul {
+        font-family: "MyFont";
+        display: flex;
+        list-style-type: none;
+        padding: 0;
+        justify-content: center;
+        align-items: center;
+        margin: 20px 0;
+        margin-left:9%;
+    }
+
+    nav ul li {
+        margin: 0 40px;
+    }
+
+    nav ul li.logo img {
+        max-width: 100px;
+    }
+
+    nav ul li a {
+        text-decoration: none;
+        color: #333;
+        font-weight: bold;
+    }
+    nav ul li a:hover{
+      color:#E7D2CC;
+    }
+
+    .language-switch select {
+    font-family: "MyFontEN";
+    font-size: 15px;
+    padding:5px;
+    cursor: pointer;
+    border:none;
+    border-radius: 5px;
+    background-color: #F6F5F1;
+    color: #333;
+}
+
+    .language-switch select:hover {
+        border-color: #E7D2CC;
+        background-color: #E7D2CC;
+        color: white;
+    }
+
+
+    main {
+        flex: 1; /* Allows the main content to grow and take up any remaining space */
+        width: 100%; /* Ensures it spans the entire width of the body */
+        justify-content: center;
+        margin-top:5%;
+    }
+
+    .card {
+        background: white;
+        padding: 20px;
+        box-shadow: 15px 15px 10px #ccc;
+        display: flex;
+        align-items: center;
+        margin: auto; /* Centers the card vertically and horizontally */
+        width:50%;
+    }
+    .card h1{
+      font-family: "MyTitleEN";
+      font-size: 400%;
+    }
+
+    .profile-photo {
+        flex-grow: 1;
+        width: 279.5px;
+        height: 279.5px;
+        /* border-radius: 50%; */
+        margin-right: 40px;
+        margin-left:40px;
+    }
+
+    .info {
+      flex-grow: 1;
+      width:50%;
+        text-align: left;
+        font-family: "MyFontEN";
+        font-weight:bold;
+        font-size:13px;
+
+    }
+    .info p{
+      text-align: justify;
+      margin-right: 40px;
+      font-family: "MyFontEN";
+      font-weight: normal;
+    }
+
+
+    footer {
+        width: 100%;
+        background: #333;
+        color: white;
+        padding: 10px 0;
+        text-align: center;
+    }
+
+
+    </style>
+  </head>
+  <body>
+    <nav>
+        <ul>
+            <li><a href="aboutEN.html">About</a></li>
+            <li><a href="projectEN.html">Projects</a></li>
+            <li class="logo"><img src="image/1.png" alt="Your Logo"></li>
+            <li><a href="photographyEN.html">Photography</a></li>
+            <li><a href="contactEN.html">Contact</a></li>
+            <li class="language-switch">
+                <select id="language-selector">
+                    <option value="indexEN.html">English</option>
+                    <option value="index.html">中文</option>
+                </select>
+            </li>
+        </ul>
+    </nav>
+
+    <script>
+        // Redirect the user based on the selected language
+        document.getElementById("language-selector").addEventListener("change", function () {
+            const selectedLanguage = this.value; // Get the selected option's value
+            window.location.href = selectedLanguage; // Redirect to the selected page
+        });
+    </script>
+        </ul>
+    </nav>
+    <main>
+      <div class="card">
+            <div class="profile">
+                <img src="image/profile.jpeg" alt="Your Photo" class="profile-photo">
+            </div>
+            <div class="info">
+                <h1>Ziquan(Isabel) Chai</h1>
+                <h3>based in Los Angeles & Shanghai</h3>
+                <p>Content Creator | Digital Marketer | <br>Social Media Strategist | USC & NYU Alum | <br>Previous Casting Director with Proven Track Record</p>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>© 2024 Ziquan Chai</p>
+    </footer>
+  </body>
+</html>

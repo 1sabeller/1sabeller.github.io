@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Ziquan Chai</title>
+    <style media="screen">
+    @font-face {
+        font-family: 'MyFont';
+        src: url('font/font.ttf');
+
+    }
+    @font-face {
+        font-family: 'MyTitle';
+        src: url('font/title.ttf');
+
+    }
+    @font-face {
+        font-family: 'MyTitleEN';
+        src: url('font/DancingScript-Bold.ttf');
+
+    }
+    @font-face {
+        font-family: 'MyFontEN';
+        src: url('font/Lora-VariableFont_wght.ttf');
+
+    }
+    @font-face {
+        font-family: 'MyFontENBold';
+        src: url('font/fontENBold.ttf');
+
+    }
+    body {
+        line-height: 1.6;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+        background: #F6F5F1;
+    }
+
+    nav ul {
+        font-family: "MyFontEN";
+        display: flex;
+        list-style-type: none;
+        padding: 0;
+        justify-content: center;
+        align-items: center;
+        margin: 20px 0;
+        margin-left:9%;
+    }
+
+    nav ul li {
+        margin: 0 40px;
+    }
+
+    nav ul li.logo img {
+        max-width: 100px;
+    }
+
+    nav ul li a {
+        text-decoration: none;
+        color: #333;
+        font-weight: bold;
+    }
+    nav ul li a:hover{
+      color:#E7D2CC;
+    }
+
+    .language-switch select {
+    font-family: "MyFontEN";
+    font-size: 15px;
+    padding:5px;
+    cursor: pointer;
+    border:none;
+    border-radius: 5px;
+    background-color: #F6F5F1;
+    color: #333;
+}
+
+    .language-switch select:hover {
+        border-color: #E7D2CC;
+        background-color: #E7D2CC;
+        color: white;
+    }
+
+
+    main {
+        flex: 1; /* Allows the main content to grow and take up any remaining space */
+        width: 100%; /* Ensures it spans the entire width of the body */
+        justify-content: center;
+        margin-top:5%;
+    }
+
+    .card {
+        background: white;
+        padding: 20px;
+        box-shadow: 15px 15px 10px #ccc;
+
+        margin: auto; /* Centers the card vertically and horizontally */
+        width:50%;
+    }
+    .card h1{
+      font-family: "MyTitleEN";
+      font-size: 400%;
+    }
+
+    .info {
+
+
+        text-align: left;
+        font-family: "MyFontEN";
+        font-size:12px;
+    }
+    .info p{
+      text-align: justify;
+
+    }
+
+
+    footer {
+        width: 100%;
+        background: #333;
+        color: white;
+        padding: 10px 0;
+        text-align: center;
+    }
+
+
+    </style>
+  </head>
+  <body>
+    <nav>
+        <ul>
+
+            <li><a href="indexEN.html">Home</a></li>
+            <li><a href="aboutEN.html">About</a></li>
+            <li class="logo"><img src="image/1.png" alt="Your Logo"></li>
+            <li><a href="projectEN.html">Project</a></li>
+            <li><a href="photographyEN.html">Photography</a></li>
+            <li class="language-switch">
+                <select id="language-selector">
+                    <option value="contactEN.html">English</option>
+                    <option value="contact.html">中文</option>
+
+                </select>
+            </li>
+        </ul>
+    </nav>
+
+    <script>
+        // Redirect the user based on the selected language
+        document.getElementById("language-selector").addEventListener("change", function () {
+            const selectedLanguage = this.value; // Get the selected option's value
+            window.location.href = selectedLanguage; // Redirect to the selected page
+        });
+    </script>
+    <main>
+      <div class="card">
+            <div class="info">
+                <h1>Ziquan(Isabel) Chai</h1>
+                <p><span style = "font-weight: bold";>Email:</span> ziquanc@usc.edu</p>
+                <p><span style = "font-weight: bold";>Phone:</span> +1 929-977-6908 / +86 185-5039-7973</p>
+                <p><span style = "font-weight: bold";>LinkedIn: </span>https://www.linkedin.com/in/ziquan-chai-89a4b9219/</p>
+                <p><span style = "font-weight: bold";>Instagram: </span>@Is_a_bel0406</p>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>© 2024 Ziquan Chai</p>
+    </footer>
+  </body>
+</html>
