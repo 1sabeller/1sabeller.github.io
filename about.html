@@ -25,13 +25,14 @@
     }
 
     nav ul {
-      font-family: "MyFont";
+        font-family: "MyFont";
         display: flex;
         list-style-type: none;
         padding: 0;
         justify-content: center;
         align-items: center;
         margin: 20px 0;
+        margin-left:9%;
     }
 
     nav ul li {
@@ -50,6 +51,25 @@
     nav ul li a:hover{
       color:#E7D2CC;
     }
+
+    .language-switch select {
+    font-family: "MyFont";
+    font-size: 15px;
+    padding:5px;
+    cursor: pointer;
+    border:none;
+    border-radius: 5px;
+    background-color: #F6F5F1;
+    color: #333;
+}
+
+    .language-switch select:hover {
+        border-color: #E7D2CC;
+        background-color: #E7D2CC;
+        color: white;
+    }
+
+
     header {
     background: #333;
     padding: 20px;
@@ -91,22 +111,6 @@
       font-family: "MyTitle";
     }
 
-    .project-container {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-around;
-    }
-
-    .project {
-        width: 30%;
-        margin: 10px;
-        text-align: center;
-    }
-
-    .project img {
-        width: 100%;
-        height: auto;
-    }
     .school{
       display:flex;
       flex-direction: row;
@@ -121,30 +125,115 @@
       text-align: justify;
       font-family: "MyFont";
     }
-    .prog{
-      display:flex;
-      flex-direction: row;
-      align-items: center;
-      justify-content: center;
-    }
-    .prog img{
-      width:30%;
-      margin-right:5%;
-      margin-left:5%;
-    }
+
+
     #programs p{
-      width:80%;
-      margin-left:10%;
       font-family: "MyFont";
     }
-    #professional img{
-      height:500px;
+
+    /* #professional img{
+      height:500px; */
     }
     /* img {
         max-width: 100%;
         height: auto;
         padding: 10px 0;
     } */
+    /* Flipping Carousel Container */
+  #professional {
+  margin: 20px auto;
+  padding: 20px;
+  background: white;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  width: 80%;
+  text-align: center;
+}
+
+#professional h2 {
+  font-family: "MyTitle";
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+#professional h3{
+  font-family:"MyFont";
+}
+
+.casetify .flipping-carousel {
+  display: flex; /* Enables Flexbox layout */
+  flex-wrap: wrap; /* Allows cards to wrap to the next line */
+  justify-content: center; /* Centers the cards horizontally */
+  gap: 10px; /* Adds spacing between the cards */
+}
+.ymkx .flipping-carousel {
+  display: flex; /* Enables Flexbox layout */
+  flex-wrap: wrap; /* Allows cards to wrap to the next line */
+  justify-content: center; /* Centers the cards horizontally */
+  gap: 15px; /* Adds spacing between the cards */
+}
+#programs .flipping-carousel {
+  display: flex; /* Enables Flexbox layout */
+  flex-wrap: wrap; /* Allows cards to wrap to the next line */
+  justify-content: center; /* Centers the cards horizontally */
+  gap: 10px; /* Adds spacing between the cards */
+}
+.flip-card {
+  width: calc(33.33% - 15px); /* Each card takes up 1/3 of the container width (with spacing) */
+  max-width: 300px; /* Optional: Limit the maximum width */
+  min-width: 250px; /* Optional: Ensure a minimum width for smaller screens */
+  height: 400px; /* Fixed height for all cards */
+  color:#F6F5F1;
+  font-family: "MyFont";
+  margin:3%;
+
+}
+
+
+.flip-card-inner {
+  position: relative;
+  width: 90%;
+  height: 104%;
+  text-align: justify;
+
+  transition: transform 0.6s; /* Smooth flipping animation */
+  transform-style: preserve-3d; /* Enables 3D transform */
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg); /* Flip animation on hover */
+}
+
+/* Front and back faces of the flip card */
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden; /* Hides the back when front is visible */
+  border-radius: 10px; /* Rounded corners */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+}
+
+.flip-card-front img,
+.flip-card-back img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+.flip-card-front {
+  background: #333;
+}
+
+.flip-card-back {
+  background: #333;
+  transform: rotateY(180deg); /* Rotate the back face */
+}
+
 
 
     footer {
@@ -165,35 +254,45 @@
             <li><a href="project.html">Projects</a></li>
             <li class="logo"><img src="image/1.png" alt="Your Logo"></li>
             <li><a href="photography.html">Photography</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li class="language-switch">
+                <select id="language-selector">
+                    <option value="about.html">中文</option>
+                    <option value="aboutEN.html">English</option>
+                </select>
+            </li>
         </ul>
     </nav>
+    <script>
+        // Redirect the user based on the selected language
+        document.getElementById("language-selector").addEventListener("change", function () {
+            const selectedLanguage = this.value; // Get the selected option's value
+            window.location.href = selectedLanguage; // Redirect to the selected page
+        });
+    </script>
+
     <header>
         <img src="image/profile1.jpeg" alt="Your Photo" class="profile-photo">
     </header>
     <main>
       <section id="whoiam">
             <h2>我是谁</h2>
-            <p>您好！我是柴子荃，一位经验丰富的市场营销和传播专业学生，我对通过创新的故事讲述建立有意义的联系充满热情。
-              我的专长在于将数字营销策略与吸引人的内容创作相结合，有效地触及并影响多样化的大众。
-              我拥有南加州大学通讯管理硕士学位，在国际娱乐营销和影响者策略方面磨练了我的技能，学习了跨文化界限的营销活动。
-              无论是策划影响力巨大的媒体项目，还是领导市场营销计划，我的目标都是转变品牌在数字时代的沟通方式。</p>
+            <p>您好！我是柴子荃，一位经验丰富的市场营销和传播专业学生，我对通过创新的故事讲述建立有意义的联系充满热情。我的专长在于将数字营销策略与吸引人的内容创作相结合，有效地触及并影响多样化的大众。
+            我拥有南加州大学通讯管理硕士学位，在国际娱乐营销和影响者策略方面磨练了我的技能，学习了跨文化界限的营销活动。
+            无论是策划影响力巨大的媒体项目，还是领导市场营销计划，我的目标都是转变品牌在数字时代的沟通方式。</p>
         </section>
         <section id="academic">
             <h2>我的学术背景</h2>
             <div class="school">
               <img src="image/nyu.png" alt="Academic Image 1">
-              <p>我拥有扎实的学术背景，主修传媒管理。我在<span style="color:#990000; font-weight:bold">南加州大学</span>Annenberg传播与新闻学院攻读硕士学位，
-                专注于国际娱乐营销和影响力的传播策略。在此之前，我在<span style="color:#57068c; font-weight:bold">纽约大学</span>的Steinhardt文化、教育与人类发展学院完成了本科学习，主修媒体、文化与传播，辅修韩语和网页设计并以3.8的GPA毕业。
-                我的学术旅程获得了丰富的实践经验和理论知识，使我对全球背景下的媒体动态和市场有了深刻的理解。
-              </p>
+              <p>我拥有扎实的学术背景，主修传媒管理。我在<span style='color:#990000; font-weight:bold'>南加州大学</span>Annenberg传播与新闻学院攻读硕士学位, 专注于国际娱乐营销、数字媒体营销、及数据分析。在此之前，我在<span style='color:#57068c; font-weight:bold'>纽约大学</span>的Steinhardt文化、教育与人类发展学院完成了本科学习，主修媒体、文化与传播，辅修韩语和网页设计并以3.8的GPA毕业。
+              我的学术旅程获得了丰富的实践经验和理论知识，使我对全球背景下的媒体动态和市场有了深刻的理解。</p>
               <img src="image/usc.png" alt="Academic Image 2">
             </div>
         </section>
-        <section id="professional">
+        <!-- <section id="professional">
             <h2>我的工作经历</h2>
             <div class="project-container">
-                <!-- Repeat this block for each project -->
                 <div class="project">
                     <img src="image/prof1.png" alt="Project 1">
                     <h4>令人心动的Offer第五季<br>(选角导演)</h4>
@@ -218,11 +317,184 @@
                     <img src="image/prof6.png" alt="Project 2">
                     <h4>超新星运动会第四季<br>(执行导演)</h4>
                 </div>
-                <!-- Add additional projects as needed -->
+
             </div>
+        </section> -->
+        <section id = 'professional'>
+          <h2>我的工作经历</h2>
+          <div class="casetify">
+            <h3>CASETiFY
+            <br>市场营销 </h3>
+            <div class="flipping-carousel">
+              <div class="flip-card">
+                <div class="flip-card-inner">
+                  <div class="flip-card-front">
+                    <img src="image/case1.png" alt="seeding">
+                    <p>明星/KOL Seeding</p>
+                  </div>
+                  <div class="flip-card-back">
+
+                    <p>每月独立拓展及对接25+符合品牌调性KOL/KOC，建立并维护良好的长期合作关系；成功合作包括王弘毅、陈哲远、许光汉等艺人明星；统计并分析KOL/KOC的露出数据，月均seeding露出笔记互动率达15%以上（除明星外）。</p>
+                  </div>
+                </div>
+              </div>
+              <div class="flip-card">
+                <div class="flip-card-inner">
+                  <div class="flip-card-front">
+                    <img src="image/case2.png" alt="超机智青年大会">
+                    <p>抖音365 Campaign</p>
+                  </div>
+                  <div class="flip-card-back">
+                    <p>负责每月抖音365 Campaign，根据不同产品推广卖点制定差异化框架和内容方向，通过星图平台筛选符合品牌调性且数据优质的KOL；通过分析和检测数据，优化内容策略，实现每月平均曝光量400w+(超预估200%)，CPM创历史最低，A3转化增长308%，5A总计增长507.14%；利用巨量云图进行数据分析和复盘，投放Ad和抖+。</p>
+                  </div>
+                </div>
+              </div>
+
+            <div class="flip-card">
+              <div class="flip-card-inner">
+                <div class="flip-card-front">
+                  <img src="image/case3.png" alt="超机智青年大会">
+                  <p>奥运会Campaign</p>
+                </div>
+                <div class="flip-card-back">
+                  <p>负责Olympic Campaign，制定上海和成都线下活动的Brief，依据品牌调性、奥运主题及预算，邀请并对接20位 KOL/KOC参与线上 推广及线下活动宣传;线上负责前期审稿及活动后的推文发布，优化标题、内容
+                    及封面以提升博文效果;线下成功推进活动流程，协助博主完成内 容拍摄，确保活动顺利进行。</p>
+                </div>
+              </div>
+            </div>
+            <div class="flip-card">
+              <div class="flip-card-inner">
+                <div class="flip-card-front">
+                  <img src="image/case4.png" alt="超机智青年大会">
+                  <p>品牌联名</p>
+                </div>
+                <div class="flip-card-back">
+                  <p>参与Uncle Daniel、王尔德WILDE、韩国艺术家Emma Kang与CASETiFY联名产品发布，全程负责产品设计审核与上线流程，主导线 下POPUP店的开业策划及产品线规划;协助拍摄Stanley X CASETiFY合作推广内容，优化小红书平台的宣传效果，提升产品曝光度用户互动率。</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          </div>
+          <div class = "ymkx">
+            <h3>上海渔米可禧
+            <br> 选角导演 / 执行导演</h3>
+
+            <div class="flipping-carousel">
+              <div class="flip-card">
+                <div class="flip-card-inner">
+                  <div class="flip-card-front">
+                    <img src="image/prof1.png" alt="令人心动的offer第五季">
+                    <p>令人心动的Offer第五季 (选角导演)</p>
+                  </div>
+                  <div class="flip-card-back">
+
+                    <p>《令人心动的offer5》是一档由腾讯视频推出的热门职场观察类真人秀节目，通过记录职场新人在律师事务所的实习经历，展示真实的职场竞争和成长过程。节目不仅为观众提供了职业发展的启发，也因其专业性和高话题度广受关注。
+                      <br>在本季节目中，我作为选角导演负责选拔适合节目调性的选手。在总共9名选手中，我成功推荐了5名，其中黄凯选手在节目播出一个月内实现粉丝增长100万+。此外，节目微博IP阅读量突破46亿，成为引发广泛讨论的现象级综艺。</p>
+                  </div>
+                </div>
+              </div>
+              <div class="flip-card">
+                <div class="flip-card-inner">
+                  <div class="flip-card-front">
+                    <img src="image/prof2.png" alt="超机智青年大会">
+                    <p>超机智青年大会 (选角导演)</p>
+                  </div>
+                  <div class="flip-card-back">
+                    <p>《超机智青年大会》是一档由优酷推出的综艺节目，通过趣味性和挑战性的游戏环节展现青年嘉宾的智慧和团队协作能力，兼具娱乐性与正能量，是备受年轻观众喜爱的节目。
+                      <br>在该节目后半期，我作为选角导演加入项目，团队需要从众多候选人中选出6名嘉宾。我成功推荐了其中的2名，凭借对节目调性和嘉宾特质的精准把握，为节目的表现和观众的喜爱度贡献了力量。</p>
+                  </div>
+                </div>
+              </div>
+              <div class="flip-card">
+                <div class="flip-card-inner">
+                  <div class="flip-card-front">
+                    <img src="image/prof3.png" alt="超机智青年大会">
+                    <p>了不起的打工人(选角导演）</p>
+                  </div>
+                  <div class="flip-card-back">
+
+                    <p>《了不起的打工人》是一档由优酷推出的职业体验类真人秀节目，通过记录嘉宾们在不同职业中的真实工作体验，展现当代打工人的奋斗精神和生活百态，充满现实意义和共鸣感。
+                      <br>这是我第一次参与选角的项目，共需要选出8名嘉宾，我成功推荐了其中的2人。其中一位嘉宾在节目的表现备受认可，今年更是受邀参与了优酷的另一档热门综艺《岛屿少年》，进一步提升了个人影响力。这次经历为我在选角领域积累了宝贵的经验。</p>
+                  </div>
+                </div>
+              </div>
+
+            <div class="flip-card">
+              <div class="flip-card-inner">
+                <div class="flip-card-front">
+                  <img src="image/prof4.png" alt="超机智青年大会">
+                  <p>创造营亚洲 (选角导演)</p>
+                </div>
+                <div class="flip-card-back">
+
+                  <p>《CHUANG ASIA》是由腾讯视频推出的《创造营》系列面向国际市场的特别季，旨在通过全球选拔集结具有潜力的青年艺人，共同打造具有国际化视野的偶像团体。节目融合了多元文化背景，展示了东南亚及亚洲其他地区青年艺人的才华与魅力。
+                      <br>在参与《CHUANG ASIA》项目期间，我与多名东南亚艺人建立了联系，包括 Alissa Janine 和 SGO 48 的成员。这些合作不仅拓展了节目在东南亚市场的影响力，也为节目增添了更具国际化的元素，助力其在海外观众中获得更高的关注度。
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="flip-card">
+              <div class="flip-card-inner">
+                <div class="flip-card-front">
+                  <img src="image/prof5.png" alt="超机智青年大会">
+                  <p>舞台2023 (执行导演)</p>
+                </div>
+                <div class="flip-card-back">
+
+                  <p>《舞台2023》是一档由腾讯视频推出的音乐竞技类综艺节目，旨在通过多元化的舞台表演，展现顶级音乐人和新生代艺人的创作才华与舞台魅力。节目汇聚了中外知名音乐人，为观众带来了高水平的音乐盛宴。
+                    <br>在参与《舞台2023》项目期间，我负责协调艺人与导演组之间的拍摄工作，包括国际知名艺人王嘉尔（Jackson Wang）、Jay Park（朴宰范）等。在拍摄过程中，我有效推动了艺人与团队的沟通合作，确保了拍摄任务的顺利进行，并为节目的高质量制作贡献了重要力量。</p>
+                </div>
+              </div>
+            </div>
+            <div class="flip-card">
+              <div class="flip-card-inner">
+                <div class="flip-card-front">
+                  <img src="image/prof6.png" alt="超机智青年大会">
+                  <p>超新星运动会第四季 (执行导演)</p>
+                </div>
+                <div class="flip-card-back">
+
+                  <p>《超新星运动会第四季》是一档由腾讯视频推出的体育竞技类真人秀节目，通过多位明星艺人参与的体育项目竞技，展现青春活力与拼搏精神。节目以团结协作和竞技趣味为核心，吸引了大量年轻观众的关注。
+                    <br>在参与《超新星运动会第四季》项目期间，我负责协调百余名艺人的节目直播及品牌直播拍摄工作，其中包括知名艺人组合 INTO1、Amber 刘逸云，以及李佳隆等。我的工作确保了各环节的流畅执行，有效提升了节目的制作效率和直播效果，同时加强了品牌合作的曝光度和影响力。</p>
+                </div>
+              </div>
+            </div>
+        </div>
+      </div>
+
+
+
         </section>
         <section id="programs">
-            <h2>小红书账号 @1sabeller</h2>
+          <h2>小红书个人运营 @1sabeller</h2>
+          <div class="flipping-carousel">
+            <div class="flip-card">
+              <div class="flip-card-inner">
+                <div class="flip-card-front">
+                  <img src="image/prog1.png" alt="seeding">
+                  <p>WeChai - 王艺妍妤篇</p>
+                </div>
+                <div class="flip-card-back">
+                  <p><span style = "font-weight:bold">《WeChai》-王艺妍妤篇</span><br><br>
+                    2024年4月7日发布，该视频在21天内观看量达到153,400次，71条评论，4,480个赞和793次收藏，粉丝增长897人。</p>
+                </div>
+              </div>
+            </div>
+            <div class="flip-card">
+              <div class="flip-card-inner">
+                <div class="flip-card-front">
+                  <img src="image/prog2.png" alt="超机智青年大会">
+                  <p>WeChai - 胡明昊篇</p>
+                </div>
+                <div class="flip-card-back">
+                  <p> <span style ="font-weight:bold">《WeChai》-胡明昊篇</span><br><br>
+                    2024年4月13日发布。在14天内观看量为36,600次，63条评论，1,190个赞和246次收藏，粉丝增长165人。</p>
+                </div>
+              </div>
+            </div>
+            <p>利用我作为前选角导演的独特视角，我创建了一个名为“WeChai”的视频系列，邀请通过中国真人秀成为影响者的人参与其中。
+              详细探讨了中国真人秀行业，为有意愿参与节目的人和广大观众提供了深入了解娱乐世界的视角。</p>
+            <!-- <h2>小红书账号 @1sabeller</h2>
             <div class="prog">
               <img src="image/prog1.jpg" alt="Program Image 1">
               <img src="image/prog2.jpg" alt="Program Image 2">
@@ -231,7 +503,7 @@
               详细探讨了中国真人秀行业，为有意愿参与节目的人和广大观众提供了深入了解娱乐世界的视角。
 <br><span style="font-family:'MyTitle';background-color:#E7D2CC">数据统计：</span>
 <br><span style = "font-weight:bold">《WeChai》-王艺妍妤篇</span>：2024年4月7日发布，该视频在21天内观看量达到153,400次，71条评论，4,480个赞和793次收藏，粉丝增长897人。
-<br><span style ="font-weight:bold">《WeChai》-胡明昊篇</span>：2024年4月13日发布。在14天内观看量为36,600次，63条评论，1,190个赞和246次收藏，粉丝增长165人。</p>
+<br><span style ="font-weight:bold">《WeChai》-胡明昊篇</span>：2024年4月13日发布。在14天内观看量为36,600次，63条评论，1,190个赞和246次收藏，粉丝增长165人。</p> -->
         </section>
     </main>
     <footer>
