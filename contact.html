@@ -6,12 +6,12 @@
     <style media="screen">
     @font-face {
         font-family: 'MyFont';
-        src: url('font/1.ttf');
+        src: url('font/font.ttf');
 
     }
     @font-face {
         font-family: 'MyTitle';
-        src: url('font/2.ttf');
+        src: url('font/title.ttf');
 
     }
     body {
@@ -25,13 +25,14 @@
     }
 
     nav ul {
-      font-family: "MyFont";
+        font-family: "MyFont";
         display: flex;
         list-style-type: none;
         padding: 0;
         justify-content: center;
         align-items: center;
         margin: 20px 0;
+        margin-left:9%;
     }
 
     nav ul li {
@@ -49,6 +50,23 @@
     }
     nav ul li a:hover{
       color:#E7D2CC;
+    }
+
+    .language-switch select {
+    font-family: "MyFont";
+    font-size: 15px;
+    padding:5px;
+    cursor: pointer;
+    border:none;
+    border-radius: 5px;
+    background-color: #F6F5F1;
+    color: #333;
+}
+
+    .language-switch select:hover {
+        border-color: #E7D2CC;
+        background-color: #E7D2CC;
+        color: white;
     }
 
 
@@ -99,20 +117,37 @@
   <body>
     <nav>
         <ul>
-          <li><a href="index.html">Home</a></li>
+
+            <li><a href="index.html">Home</a></li>
             <li><a href="about.html">About</a></li>
             <li class="logo"><img src="image/1.png" alt="Your Logo"></li>
-              <li><a href="project.html">Projects</a></li>
+            <li><a href="project.html">Project</a></li>
             <li><a href="photography.html">Photography</a></li>
+            <li class="language-switch">
+                <select id="language-selector">
 
+                    <option value="contact.html">中文</option>
+                    <option value="contactEN.html">English</option>
+                </select>
+            </li>
         </ul>
     </nav>
+
+    <script>
+        // Redirect the user based on the selected language
+        document.getElementById("language-selector").addEventListener("change", function () {
+            const selectedLanguage = this.value; // Get the selected option's value
+            window.location.href = selectedLanguage; // Redirect to the selected page
+        });
+    </script>
     <main>
       <div class="card">
             <div class="info">
-                <h1>Ziquan Chai</h1>
-                <p>Email: zc1550@usc.edu</p>
-                <p>Phone: +1 929-977-6908 / +86 185-5039-7973</p>
+                <h1>柴子荃</h1>
+                <p>邮箱: zc1550@usc.edu</p>
+                <p>电话: +1 929-977-6908 / +86 185-5039-7973</p>
+                <p>微信：mafan890622</p>
+                <p>小红书/抖音：@1sabeller</p>
             </div>
         </div>
     </main>
